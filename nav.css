@@ -1,0 +1,86 @@
+/* Colors : #5c7fa3, #7D99B5, #A3805C */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'Lato', sans-serif;
+    min-height: 100%;
+}
+
+nav{
+    height: 8vh;
+    box-shadow: 0px 6px 4px -2px rgba(0,0,0,0.18);
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#logo h2{
+    position: absolute;
+    left: 2em;
+    cursor: pointer;
+}
+
+#logo a{
+    text-decoration: none;
+    color: black;
+}
+
+#heading{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+#heading h3{
+    letter-spacing: 1px;
+}
+
+#logIn{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+#logIn #login{
+    position: absolute;
+    right: 2em;
+    cursor: pointer;
+}
+
+#login a{
+    text-decoration: none;
+    color: black;
+}
+
+#logIn #account{
+    position: absolute;
+    right: 6em;
+    cursor: pointer;
+}
+
+#logIn #account a{
+    text-decoration: none;
+    color: black;
+}
+
+#logIn #login::before{
+    content: "\007C";
+    padding-right: .5em;
+    color: #7D99B5;
+    cursor: auto;
+}
