@@ -1,2 +1,1 @@
-# motoOtoFront
-<h2>OtoMoto clone app</h2>
+# MotoOto Clone app
