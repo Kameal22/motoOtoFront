@@ -281,8 +281,8 @@ html, body{
 .register button{
     width: 100%;
     height: 4vh;
-    background-color: #70a5db88;
-    border: 1px solid grey;
+    background-color: rgba(255, 255, 255, 0.753);
+    border: 1px solid white;
     cursor: pointer;
     font-size: 1.1em;
     letter-spacing: 1px;
@@ -290,7 +290,7 @@ html, body{
 }
 
 .register button:hover{
-    background-color: #50a3f7ad;
+    background-color: rgba(255, 255, 255, 0.308);
 }
 
 .overlay {
@@ -392,7 +392,7 @@ html, body{
     width: 100%;
     margin-top: 4vh;
     height: 4vh;
-    background-color: #75a1ce4b;
+    background-color: rgba(255, 255, 255, 0.753);
     border: 1px solid grey;
     cursor: pointer;
     font-size: 1.1em;
@@ -400,7 +400,7 @@ html, body{
 }
 
 .content button:hover{
-    background-color: #75a2cead;
+    background-color: rgba(255, 255, 255, 0.308);
 }
 
 footer{
