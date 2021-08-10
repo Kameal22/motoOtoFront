@@ -249,14 +249,14 @@ html, body{
 }
 
 #mainReg .heading{
-    height: 12vh;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #mainReg .register{
-    margin-top: 4vh;
+    margin-top: 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -268,7 +268,7 @@ html, body{
 }
 
 .form-group label{
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
 }
 
@@ -315,8 +315,8 @@ html, body{
     padding: 20px;
     background: rgba(255, 255, 255, 0.767);
     border-radius: 5px;
-    width: 25%;
-    height: 55vh;
+    width: 30%;
+    height: 65vh;
     position: relative;
     transition: all 5s ease-in-out;
     display: flex;
@@ -390,7 +390,7 @@ html, body{
 
 .content button{
     width: 100%;
-    margin-top: 4vh;
+    margin-top: 6vh;
     height: 4vh;
     background-color: rgba(255, 255, 255, 0.753);
     border: 1px solid grey;
