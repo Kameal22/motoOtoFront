@@ -281,7 +281,7 @@ html, body{
 .register button{
     width: 100%;
     height: 4vh;
-    background-color: #75a1ce4b;
+    background-color: #70a5db88;
     border: 1px solid grey;
     cursor: pointer;
     font-size: 1.1em;
@@ -290,7 +290,7 @@ html, body{
 }
 
 .register button:hover{
-    background-color: #75a2cead;
+    background-color: #50a3f7ad;
 }
 
 .overlay {
@@ -346,7 +346,7 @@ html, body{
 }
 
 .popup .close:hover {
-    color: #06D85F;
+    color: #588ec5;
 }
 
 .popup .content {
