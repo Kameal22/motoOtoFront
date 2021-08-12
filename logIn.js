@@ -9,7 +9,6 @@ loginForm.addEventListener('submit', (e) =>{
         password: password
       })
       .then(function (response) {
-        console.log(response);
         const token = response.data;
 
 

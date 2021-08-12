@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="registration.css">
     <link rel="icon" href="favicon.ico">
     <title>MotoOto - Search for cars, buy, lease, sell</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -52,13 +53,13 @@
 
             <div class="register">
 
-                <form action="" method="POST" id="registrationForm">
+                <form id="registrationForm">
           
                     <div class="form-group">
 
-                      <label for="email">Enter email: </label>
+                      <label for="emailReg">Enter email: </label>
 
-                      <input type="email" id="email" name="email" placeholder="email">
+                      <input type="email" id="email" name="emailReg" placeholder="email">
 
                     </div>
               
@@ -72,19 +73,19 @@
               
                     <div class="form-group">
 
-                      <label for="passwd">Enter password: </label>
+                      <label for="passwdReg">Enter password: </label>
 
-                      <input type="password" id="passwd" name="passwd" placeholder="password">
+                      <input type="password" id="passwd" name="passwdReg" placeholder="password">
 
                     </div>
               
-                    <div class="form-group">
+                    <!-- <div class="form-group">
 
                       <label for="passwdRe">Confirm password: </label>
 
                       <input type="password" id="passwdRe" name="passwdRe" placeholder="confirm">
                       
-                    </div>
+                    </div> -->
               
                     <button type="submit">Register</button>
 
@@ -117,7 +118,7 @@
 
     </footer>
 
-
+    <script src="register.js"></script>
     <script src="app.js"></script>
 </body>
 
