@@ -267,6 +267,18 @@ html, body{
     width: 100%;
 }
 
+.register .form-group input{
+    border: 2px solid grey;
+}
+
+.registerError{
+    border: 2px solid red;
+}
+
+.registerPass{
+    border: 2px solid green;
+}
+
 .form-group label{
     font-size: 1em;
     font-weight: bold;

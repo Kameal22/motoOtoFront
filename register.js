@@ -1,12 +1,22 @@
 const registrationForm = document.querySelector('#registrationForm');
 
+const emailInput = document.querySelector('#email');
+const userNameInput = document.querySelector('#userName');
+const passwdInput = document.querySelector('#passwd');
+const passwdReInput = document.querySelector('#passwdRe');
+
+let isValidated = false;
+
 registrationForm.addEventListener('submit', (f) =>{
-    f.preventDefault();
     checkInputs();
-    let emailReg = registrationForm.elements.emailReg.value;
-    let userName = registrationForm.elements.userName.value;
-    let passwordReg = registrationForm.elements.passwdReg.value;
-    let passwordRegRe = registrationForm.elements.passwdRe.value;
+    f.preventDefault();
+    let emailReg = registrationForm.elements.emailReg.value.trim();
+    let userName = registrationForm.elements.userName.value.trim();
+    let passwordReg = registrationForm.elements.passwdReg.value.trim();
+    let passwordRegRe = registrationForm.elements.passwdRe.value.trim();
+
+    if(isValidated == true){
+
     axios.post('http://localhost:8080/api/auth/register', {
         username: userName,
         email: emailReg,
@@ -20,17 +30,38 @@ registrationForm.addEventListener('submit', (f) =>{
         console.log(error);
         console.log(error.message);
       });
+    }
 })
 
 function checkInputs(){
-  const emailReg = registrationForm.elements.emailReg.value.trim();
-  const userName = registrationForm.elements.userName.value.trim();
-  const passwdReg = registrationForm.elements.passwdReg.value.trim();
-  const passwdRegRe = registrationForm.elements.passwdRe.value.trim();
+  let emailReg = registrationForm.elements.emailReg.value.trim();
+  let userName = registrationForm.elements.userName.value.trim();
+  let passwordReg = registrationForm.elements.passwdReg.value.trim();
+  let passwordRegRe = registrationForm.elements.passwdRe.value.trim();
 
-  if(emailReg.value === ""){
-    
+  if(emailReg === "" || emailReg.indexOf('@') === -1){
+    emailInput.style.borderColor = "red";
+    return false;
   }else{
-
+    emailInput.style.borderColor = "green";
   }
+
+  if(userName === ""){
+    userNameInput.style.borderColor = "red";
+    return false;
+  }else{
+    userNameInput.style.borderColor = "green";
+  }
+
+  if(passwordReg === "" || passwordReg !== passwordRegRe){
+    passwdInput.style.borderColor = "red";
+    passwdReInput.style.borderColor = "red";
+    return false;
+  }else{
+    passwdInput.style.borderColor = "green";
+    console.log(passwdInput);
+    passwdReInput.style.borderColor = "green";
+  }
+
+  isValidated = true;
 }
