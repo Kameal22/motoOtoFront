@@ -5,6 +5,8 @@ const userNameInput = document.querySelector('#userName');
 const passwdInput = document.querySelector('#passwd');
 const passwdReInput = document.querySelector('#passwdRe');
 
+const formMailDiv = document.querySelector('#formMail');
+
 let isValidated = false;
 
 registrationForm.addEventListener('submit', (f) =>{
@@ -41,25 +43,38 @@ function checkInputs(){
 
   if(emailReg === "" || emailReg.indexOf('@') === -1){
     emailInput.style.borderColor = "red";
-    return false;
+    emailInput.placeholder = "Wrong email"
   }else{
     emailInput.style.borderColor = "green";
   }
 
   if(userName === ""){
     userNameInput.style.borderColor = "red";
-    return false;
+    userNameInput.placeholder = "Wrong username"
   }else{
     userNameInput.style.borderColor = "green";
   }
 
-  if(passwordReg === "" || passwordReg !== passwordRegRe){
+  if(passwdInput.value.length < 8 || passwdReInput.value.length < 8){
     passwdInput.style.borderColor = "red";
     passwdReInput.style.borderColor = "red";
     return false;
-  }else{
+  }
+
+  else if(passwordReg !== passwordRegRe){
+    passwdInput.style.borderColor = "red";
+    passwdReInput.style.borderColor = "red";
+    return false;
+  }
+  
+  else if(passwordReg === ""){
+    passwdInput.style.borderColor = "red";
+    passwdReInput.style.borderColor = "red";
+    return false;
+  }
+
+  else{
     passwdInput.style.borderColor = "green";
-    console.log(passwdInput);
     passwdReInput.style.borderColor = "green";
   }
 
