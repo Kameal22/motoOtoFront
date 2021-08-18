@@ -267,20 +267,21 @@ html, body{
     width: 100%;
 }
 
+.register .form-group p{
+    position: absolute;
+    color: red;
+}
+
+.register .form-group p::before{
+    content: none;
+}
+
 .register .form-group input{
-    border: 2px solid grey;
-}
-
-.registerError{
-    border: 2px solid red;
-}
-
-.registerPass{
-    border: 2px solid green;
+    border: 3px solid grey;
 }
 
 .form-group label{
-    font-size: 1em;
+    font-size: .9em;
     font-weight: bold;
 }
 

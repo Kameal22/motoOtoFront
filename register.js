@@ -5,7 +5,10 @@ const userNameInput = document.querySelector('#userName');
 const passwdInput = document.querySelector('#passwd');
 const passwdReInput = document.querySelector('#passwdRe');
 
-const formMailDiv = document.querySelector('#formMail');
+const mailErr = document.querySelector('.emailP');
+const userNameErr = document.querySelector('.usernameP');
+const passwdErr = document.querySelector('.passwordP');
+const rePasswdErr = document.querySelector('.rePasswordP');
 
 let isValidated = false;
 
@@ -43,39 +46,42 @@ function checkInputs(){
 
   if(emailReg === "" || emailReg.indexOf('@') === -1){
     emailInput.style.borderColor = "red";
-    emailInput.placeholder = "Wrong email"
+    mailErr.textContent = "Wrong email"
+    return false;
   }else{
     emailInput.style.borderColor = "green";
+    mailErr.textContent = ""
   }
 
   if(userName === ""){
     userNameInput.style.borderColor = "red";
-    userNameInput.placeholder = "Wrong username"
+    userNameErr.textContent = "Wrong username"
+    return false;
   }else{
     userNameInput.style.borderColor = "green";
+    userNameErr.textContent = ""
   }
 
-  if(passwdInput.value.length < 8 || passwdReInput.value.length < 8){
+  if(passwdInput.value.length < 8){
     passwdInput.style.borderColor = "red";
-    passwdReInput.style.borderColor = "red";
+    passwdErr.textContent = "Wrong password";
     return false;
+  }else{
+    passwdInput.style.borderColor = "green";
+    passwdErr.textContent = "";
   }
 
-  else if(passwordReg !== passwordRegRe){
-    passwdInput.style.borderColor = "red";
+  if(passwordReg !== passwordRegRe){
     passwdReInput.style.borderColor = "red";
-    return false;
-  }
-  
-  else if(passwordReg === ""){
-    passwdInput.style.borderColor = "red";
-    passwdReInput.style.borderColor = "red";
+    rePasswdErr.textContent = "Passwords doesn't match"
     return false;
   }
 
   else{
     passwdInput.style.borderColor = "green";
     passwdReInput.style.borderColor = "green";
+    passwdErr.textContent = ""
+    rePasswdErr.textContent = ""
   }
 
   isValidated = true;
