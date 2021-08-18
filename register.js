@@ -18,7 +18,6 @@ registrationForm.addEventListener('submit', (f) =>{
     let emailReg = registrationForm.elements.emailReg.value.trim();
     let userName = registrationForm.elements.userName.value.trim();
     let passwordReg = registrationForm.elements.passwdReg.value.trim();
-    let passwordRegRe = registrationForm.elements.passwdRe.value.trim();
 
     if(isValidated == true){
 
@@ -29,7 +28,10 @@ registrationForm.addEventListener('submit', (f) =>{
       })
       .then(function (response) {
         console.log(response);
-    
+        const token = response.data;
+        parseJwt(token);
+        window.localStorage.setItem('userToken', token);
+        // location.href = "index.html";
       })
       .catch(function (error) {
         console.log(error);
@@ -37,6 +39,18 @@ registrationForm.addEventListener('submit', (f) =>{
       });
     }
 })
+
+function parseJwt (token) {
+  var base64Url = token.split('.')[1];
+  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+
+  console.log(jsonPayload);
+
+  return JSON.parse(jsonPayload);
+};
 
 function checkInputs(){
   let emailReg = registrationForm.elements.emailReg.value.trim();
