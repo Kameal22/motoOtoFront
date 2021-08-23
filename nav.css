@@ -60,6 +60,17 @@ nav{
 
 #userNameSection h3{
     letter-spacing: 1px;
+    margin-right: 1em;
+}
+
+#logoutBtn{
+    cursor: pointer;
+}
+
+#logoutBtn::before{
+    content: "\007C";
+    padding-right: .5em;
+    color: #7D99B5;
 }
 
 #logIn{
