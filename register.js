@@ -30,7 +30,6 @@ registrationForm.addEventListener('submit', (f) =>{
         console.log(response);
         const token = response.data;
         parseJwt(token);
-        console.log(token);
         window.localStorage.setItem('userToken', token);
         location.href = "index.html";
       })

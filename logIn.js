@@ -1,4 +1,5 @@
 const loginForm = document.querySelector('#loginForm');
+const loginButton = document.querySelector('#loginBtn');
 
 loginForm.addEventListener('submit', (e) =>{
     e.preventDefault();
@@ -10,7 +11,10 @@ loginForm.addEventListener('submit', (e) =>{
       })
       .then(function (response) {
         const token = response.data;
-        parseJwt(token);
+        // parseJwt(token);
+        console.log(token);
+        window.localStorage.setItem('userToken', token);
+        location.href = "index.html";
       })
 
       .catch(function (error) {
@@ -25,7 +29,7 @@ function parseJwt (token) {
       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
   }).join(''));
 
-  console.log(jsonPayload);
+  // console.log(jsonPayload);
 
   return JSON.parse(jsonPayload);
 };
