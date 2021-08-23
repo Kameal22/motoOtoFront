@@ -4,8 +4,6 @@ function getRawJwt(){
     console.log(rawToken);
 }
 
-getRawJwt();
-
 function getParsedJwt(rawToken){
     var base64Url = rawToken.split('.')[1];
     var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
@@ -15,12 +13,10 @@ function getParsedJwt(rawToken){
 
     const objectToken = JSON.parse(jsonPayload);
 
-    console.log(objectToken);
+    console.log(objectToken.username);
 
     return JSON.parse(jsonPayload);
 }
-
-getParsedJwt(rawToken);
 
 function checkIfExpired(rawToken){
     var base64Url = rawToken.split('.')[1];
@@ -43,5 +39,3 @@ function checkIfExpired(rawToken){
 
     return JSON.parse(jsonPayload);
 }
-
-checkIfExpired(rawToken);

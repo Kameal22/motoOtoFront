@@ -48,6 +48,20 @@ nav{
     letter-spacing: 1px;
 }
 
+#userNameSection{
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    margin-right: 2em;
+    display: none;
+}
+
+#userNameSection h3{
+    letter-spacing: 1px;
+}
+
 #logIn{
     width: 40%;
     display: flex;
