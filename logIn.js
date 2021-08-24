@@ -1,7 +1,10 @@
 const loginForm = document.querySelector('#loginForm');
 const loginButton = document.querySelector('#loginBtn');
 
+ifLoggedIn = false;
+
 loginForm.addEventListener('submit', (e) =>{
+    checkLoginInputs();
     e.preventDefault();
     let email = loginForm.elements.emailLog.value;
     let password = loginForm.elements.passwdLog.value;
@@ -11,7 +14,6 @@ loginForm.addEventListener('submit', (e) =>{
       })
       .then(function (response) {
         const token = response.data;
-        // parseJwt(token);
         console.log(token);
         window.localStorage.setItem('userToken', token);
         location.href = "index.html";
@@ -22,14 +24,23 @@ loginForm.addEventListener('submit', (e) =>{
       });
 })
 
-function parseJwt (token) {
-  var base64Url = token.split('.')[1];
-  var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-  var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  }).join(''));
+function checkLoginInputs(){
+  const emailLoginText = loginForm.elements.emailLog.value.trim();
+  const passwordLoginText = loginForm.elements.passwdLog.value.trim();
 
-  // console.log(jsonPayload);
+  const emailLoginInput = document.querySelector('#emailLog');
+  const passwordLoginInput = document.querySelector('#passwdLog')
 
-  return JSON.parse(jsonPayload);
-};
+  if(emailLoginText === ""){
+    console.log("empty");
+    emailLoginInput.style.border = "2px solid red";
+    return false;
+  }
+
+  if(passwordLoginText === ""){
+    console.log("empty");
+    passwordLoginInput.style.border = "2px solid red";
+    return false;
+  }
+
+}

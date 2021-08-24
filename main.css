@@ -128,15 +128,22 @@ html, body{
 
 #mainInfo{
     width: 50%;
-    height: 50%;
+    height: 35%;
     margin-right: 5%;
-    color: #06539c;
+    margin-bottom: 20%;
+    color: rgba(32, 32, 32, 0.863);
     letter-spacing: 1px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     font-size: 1em;
     font-weight: bold;
+}
+
+#mainInfo h2:before{
+    content: "\007C";
+    padding-right: 1vh;
+    color: #588ec5;
 }
 
 #scdSection{
@@ -324,11 +331,11 @@ html, body{
 }
   
 .popup {
-    margin: 70px auto;
+    margin: 10vh auto;
     padding: 20px;
     background: rgba(255, 255, 255, 0.767);
     border-radius: 5px;
-    width: 30%;
+    width: 25%;
     height: 65vh;
     position: relative;
     transition: all 5s ease-in-out;
@@ -344,7 +351,7 @@ html, body{
     color: #333;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4vh;
+    margin-top: 5vh;
 }
 
 .popup .close {
@@ -365,7 +372,7 @@ html, body{
 .popup .content {
     max-height: 60%;
     overflow: auto;
-    margin-bottom: 8vh;
+    margin-bottom: 12vh;
 }
 
 .register .form-groupLog{
