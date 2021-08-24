@@ -1,13 +1,14 @@
 const loginForm = document.querySelector('#loginForm');
 const loginButton = document.querySelector('#loginBtn');
 
-ifLoggedIn = false;
+isLoggedIn = false;
 
 loginForm.addEventListener('submit', (e) =>{
     checkLoginInputs();
     e.preventDefault();
     let email = loginForm.elements.emailLog.value;
     let password = loginForm.elements.passwdLog.value;
+
     axios.post('http://localhost:8080/api/auth/login', {
         email: email,
         password: password
@@ -21,6 +22,7 @@ loginForm.addEventListener('submit', (e) =>{
 
       .catch(function (error) {
         console.log(error);
+        checkLoginInputs();
       });
 })
 
@@ -31,16 +33,25 @@ function checkLoginInputs(){
   const emailLoginInput = document.querySelector('#emailLog');
   const passwordLoginInput = document.querySelector('#passwdLog')
 
-  if(emailLoginText === ""){
-    console.log("empty");
-    emailLoginInput.style.border = "2px solid red";
-    return false;
-  }
+  const emailLoginError = document.querySelector('.emailLogErr');
+  const passwdLoginError = document.querySelector('.passwdLogErr');
 
-  if(passwordLoginText === ""){
-    console.log("empty");
-    passwordLoginInput.style.border = "2px solid red";
-    return false;
-  }
+  emailLoginError.textContent = "Wrong email"
+  emailLoginInput.style.border = "2px solid red";
+
+  passwdLoginError.textContent = "Wrong password";
+  passwordLoginInput.style.border = "2px solid red";
+
+  // if(emailLoginText === ""){
+  //   emailLoginError.textContent = "Wrong email"
+  //   emailLoginInput.style.border = "2px solid red";
+  //   return false;
+  // }
+
+  // if(passwordLoginText === ""){
+  //   passwdLoginError.textContent = "Wrong password";
+  //   passwordLoginInput.style.border = "2px solid red";
+  //   return false;
+  // }
 
 }

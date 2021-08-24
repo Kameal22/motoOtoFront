@@ -402,6 +402,24 @@ html, body{
     width: 100%;
 }
 
+.form-groupLog p{
+    color: red;
+    position: absolute;
+}
+
+.form-groupLogPass p{
+    color: red;
+    position: absolute;
+}
+
+.form-groupLog p::before{
+    content: none;
+}
+
+.form-groupLogPass p::before{
+    content: none;
+}
+
 .form-groupLog label{
     font-size: 1.1em;
     font-weight: bold;
