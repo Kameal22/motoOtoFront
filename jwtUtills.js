@@ -13,8 +13,6 @@ function getParsedJwt(rawToken){
 
     const objectToken = JSON.parse(jsonPayload);
 
-    console.log(objectToken.username);
-
     return JSON.parse(jsonPayload);
 }
 

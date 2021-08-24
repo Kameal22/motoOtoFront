@@ -1,8 +1,6 @@
 const loginForm = document.querySelector('#loginForm');
 const loginButton = document.querySelector('#loginBtn');
 
-isLoggedIn = false;
-
 loginForm.addEventListener('submit', (e) =>{
     checkLoginInputs();
     e.preventDefault();
