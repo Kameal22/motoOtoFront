@@ -16,7 +16,7 @@ loginForm.addEventListener('submit', (e) =>{
         const token = response.data;
         console.log(token);
         window.localStorage.setItem('userToken', token);
-        location.href = "index.html";
+        location.href = "userIndex.html";
       })
 
       .catch(function (error) {

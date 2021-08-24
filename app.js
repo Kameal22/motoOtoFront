@@ -16,5 +16,5 @@ if(localStorage.length === 1){
 
 logoutBtn.addEventListener('click', () =>{
     window.localStorage.removeItem('userToken');
-    window.location.reload();
+    location.href = "index.html";
 })
