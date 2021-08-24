@@ -27,31 +27,6 @@ loginForm.addEventListener('submit', (e) =>{
 })
 
 function checkLoginInputs(){
-  const emailLoginText = loginForm.elements.emailLog.value.trim();
-  const passwordLoginText = loginForm.elements.passwdLog.value.trim();
-
-  const emailLoginInput = document.querySelector('#emailLog');
-  const passwordLoginInput = document.querySelector('#passwdLog')
-
-  const emailLoginError = document.querySelector('.emailLogErr');
-  const passwdLoginError = document.querySelector('.passwdLogErr');
-
-  emailLoginError.textContent = "Wrong email"
-  emailLoginInput.style.border = "2px solid red";
-
-  passwdLoginError.textContent = "Wrong password";
-  passwordLoginInput.style.border = "2px solid red";
-
-  // if(emailLoginText === ""){
-  //   emailLoginError.textContent = "Wrong email"
-  //   emailLoginInput.style.border = "2px solid red";
-  //   return false;
-  // }
-
-  // if(passwordLoginText === ""){
-  //   passwdLoginError.textContent = "Wrong password";
-  //   passwordLoginInput.style.border = "2px solid red";
-  //   return false;
-  // }
-
+  const loginError = document.querySelector('.passwdLogErr');
+  loginError.textContent = "Email or password incorrect"
 }

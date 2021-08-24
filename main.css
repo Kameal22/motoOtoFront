@@ -23,8 +23,8 @@ html, body{
 }
 
 #carAdding{
-    width: 35%;
-    height: 40%;
+    width: 30%;
+    height: 35%;
     margin-right: 4em;
     background: rgba( 125, 153, 181, 0.25 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -42,6 +42,34 @@ html, body{
     font-size: 1.3em;
     padding-top: 4vh;
     color: rgba(32, 32, 32, 0.863);
+}
+
+#carAdding #carAddBtn{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    text-align: center;
+    font-size: 1.3em;
+    padding-top: 4vh;
+    color: rgba(32, 32, 32, 0.863);
+}
+
+#carAddBtn button{
+    width: 60%; 
+    margin: 1vh auto;
+    background-color: rgba(255, 255, 255, 0.753);
+    border: 1px solid white;
+    color: rgba(32, 32, 32, 0.863);
+    text-align: center;
+    text-decoration: none;  
+    font-size: .8em;
+    border-radius: 5px;
+    padding: .2vh;
+}
+
+#carAddBtn button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.308);
 }
 
 #carSelection{
@@ -146,6 +174,7 @@ html, body{
 
 #selectingOptions #sendBtn #sendForm:hover{
     background-color: rgba(255, 255, 255, 0.308);
+    cursor: pointer;
 }
 
 #mainInfo{
@@ -402,18 +431,9 @@ html, body{
     width: 100%;
 }
 
-.form-groupLog p{
-    color: red;
-    position: absolute;
-}
-
 .form-groupLogPass p{
     color: red;
     position: absolute;
-}
-
-.form-groupLog p::before{
-    content: none;
 }
 
 .form-groupLogPass p::before{
