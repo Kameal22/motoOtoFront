@@ -22,56 +22,6 @@ html, body{
     justify-content: space-around;
 }
 
-#carAdding{
-    width: 30%;
-    height: 35%;
-    margin-right: 4em;
-    background: rgba( 125, 153, 181, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-#carAdding #carAddHeading{
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-align: center;
-    font-size: 1.3em;
-    padding-top: 4vh;
-    color: rgba(32, 32, 32, 0.863);
-}
-
-#carAdding #carAddBtn{
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    text-align: center;
-    font-size: 1.3em;
-    padding-top: 4vh;
-    color: rgba(32, 32, 32, 0.863);
-}
-
-#carAddBtn button{
-    width: 60%; 
-    margin: 1vh auto;
-    background-color: rgba(255, 255, 255, 0.753);
-    border: 1px solid white;
-    color: rgba(32, 32, 32, 0.863);
-    text-align: center;
-    text-decoration: none;  
-    font-size: .8em;
-    border-radius: 5px;
-    padding: .2vh;
-}
-
-#carAddBtn button:hover{
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.308);
-}
-
 #carSelection{
     width: 35%;
     height: 90%;
