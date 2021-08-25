@@ -53,97 +53,133 @@
 
     <section id="addingSection">
 
-        <div id="addACar">
+        <section id="addACar">
 
-            <form action="/nowhere">
+            <div class="addingHeading">
 
-                <section id="firstForms">
+                <h3 id="carAddHeading">What are you selling?</h3>
 
-                    <div class="formOne">
+            </div>
 
-                        <label for="brandSelect">Brand</label>
-                        <select name="brandSelect" id="brandSelection">
-                            <option value="" disabled selected>Car brand</option>
-                            <option value="1">Audi</option>
-                            <option value="2">BMW</option>
-                        </select>
+            <div id="addingOptions">
+
+                <form action="/nowhere">
+
+                    <section id="firstAddForms">
+
+                        <div class="formAddOne">
+
+                            <label for="productionYr">Production year</label>
+                            <select name="productionYr" id="productionYear">
+                                <option value="" disabled selected>Car brand</option>
+                                <option value="1">Audi</option>
+                                <option value="2">BMW</option>
+                            </select>
+
+                        </div>
+
+                        <div class="formAddTwo">
+
+                            <label for="brandAdd">Brand</label>
+                            <select name="brandAdd" id="brandAdding">
+                                <option value="" disabled selected>Car model</option>
+                                <option value="1">A6</option>
+                                <option value="2">e30</option>
+                            </select>
+
+                        </div>
+
+                    </section>
+
+                    <section id="scdAddForms">
+
+                        <div class="formAddThree">
+
+                            <label for="modelAdd">Model</label>
+                            <select name="modelAdd" id="modelAdding">
+                                <option value="" disabled selected>Car generation</option>
+                                <option value="1">I</option>
+                                <option value="2">II</option>
+                            </select>
+
+                        </div>
+
+                        <div class="formAddFour">
+
+                            <label for="generationAdd">Generation</label>
+                            <select name="generationAdd" id="generationAdding">
+                                <option value="" disabled selected>Select fuel</option>
+                                <option value="1">Diesel</option>
+                                <option value="2">Gasoline</option>
+                            </select>
+
+                        </div>
+
+                    </section>
+
+                    <section id="thirdAddForms">
+
+                        <div class="formAddFive">
+
+                            <label for="fuelAdd">Fuel</label>
+                            <select name="fuelAdd" id="fuelAdding">
+                                <option value="" disabled selected>Engine capacity</option>
+                                <option value="1">1600 cm<sup>3</sup></option>
+                                <option value="2">2000 cm<sup>3</sup></option>
+                            </select>
+
+                        </div>
+
+                        <div class="formAddSix">
+
+                            <label for="capacityAdd">Capacity</label>
+                            <select name="capacityAdd" id="capacityAdding">
+                                <option value="" disabled selected>Select mileage</option>
+                                <option value="1">50 000 km</option>
+                                <option value="2">150 000 km</option>
+                            </select>
+
+                        </div>
+
+                    </section>
+
+                    <section id="fourthAddForms">
+
+                        <div class="formAddSeven">
+
+                            <label for="isDamaged">Is damaged</label>
+                            <select name="isDamaged" id="isDamagedAdd">
+                                <option value="" disabled selected>Engine capacity</option>
+                                <option value="1">1600 cm<sup>3</sup></option>
+                                <option value="2">2000 cm<sup>3</sup></option>
+                            </select>
+
+                        </div>
+
+                        <div class="formAddEight">
+
+                            <label for="carMileageAdd">Car origin</label>
+                            <select name="carMileageAdd" id="mileageAdding">
+                                <option value="" disabled selected>Select mileage</option>
+                                <option value="1">50 000 km</option>
+                                <option value="2">150 000 km</option>
+                            </select>
+
+                        </div>
+
+                    </section>
+
+                    <div id="sendAddBtn">
+
+                        <input type="submit" value="Create announcement" id="sendAddForm">
 
                     </div>
 
-                    <div class="formTwo">
+                </form>
 
-                        <label for="modelSelect">Model</label>
-                        <select name="modelSelect" id="modelSelection">
-                            <option value="" disabled selected>Car model</option>
-                            <option value="1">A6</option>
-                            <option value="2">e30</option>
-                        </select>
+            </div>
 
-                    </div>
-
-                </section>
-
-                <section id="scdForms">
-
-                    <div class="formThree">
-
-                        <label for="generationSelect">Generation</label>
-                        <select name="generationSelect" id="generationSelection">
-                            <option value="" disabled selected>Car generation</option>
-                            <option value="1">I</option>
-                            <option value="2">II</option>
-                        </select>
-
-                    </div>
-
-                    <div class="formFour">
-
-                        <label for="fuelSelect">Fuel</label>
-                        <select name="fuelSelect" id="fuelSelection">
-                            <option value="" disabled selected>Select fuel</option>
-                            <option value="1">Diesel</option>
-                            <option value="2">Gasoline</option>
-                        </select>
-
-                    </div>
-
-                </section>
-
-                <section id="thirdForms">
-
-                    <div class="formFive">
-
-                        <label for="capacitySelect">Capacity</label>
-                        <select name="capacitySelect" id="capacitySelection">
-                            <option value="" disabled selected>Engine capacity</option>
-                            <option value="1">1600 cm<sup>3</sup></option>
-                            <option value="2">2000 cm<sup>3</sup></option>
-                        </select>
-
-                    </div>
-
-                    <div class="formSix">
-
-                        <label for="carMileage">Car mileage</label>
-                        <select name="carMileage" id="mileageSelection">
-                            <option value="" disabled selected>Select mileage</option>
-                            <option value="1">50 000 km</option>
-                            <option value="2">150 000 km</option>
-                        </select>
-
-                    </div>
-
-                </section>
-
-                <div id="sendBtn">
-
-                    <input type="submit" value="Show cars" id="sendForm">
-
-                </div>
-
-            </form>
-
-        </div>
+        </section>
 
     </section>
 
