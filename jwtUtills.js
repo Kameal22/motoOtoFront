@@ -1,10 +1,10 @@
 const rawToken = window.localStorage.getItem('userToken')
 
-function getRawJwt(){
+function getRawJwt() {
     console.log(rawToken);
 }
 
-function getParsedJwt(rawToken){
+function getParsedJwt(rawToken) {
     var base64Url = rawToken.split('.')[1];
     var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
     var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
@@ -16,7 +16,7 @@ function getParsedJwt(rawToken){
     return JSON.parse(jsonPayload);
 }
 
-function checkIfExpired(rawToken){
+function checkIfExpired(rawToken) {
     var base64Url = rawToken.split('.')[1];
     var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
     var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
@@ -25,13 +25,13 @@ function checkIfExpired(rawToken){
 
     const objectToken = JSON.parse(jsonPayload);
 
-    const tokenExp = new Date(objectToken.exp*1000)
+    const tokenExp = new Date(objectToken.exp * 1000)
 
     const actualDate = new Date();
 
-    if(tokenExp > actualDate){
+    if (tokenExp > actualDate) {
         console.log('Not expired')
-    }else{
+    } else {
         console.log('Expired');
     }
 

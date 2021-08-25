@@ -1,24 +1,25 @@
 /* Colors : #5c7fa3, #7D99B5, #A3805C */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     font-family: 'Lato', sans-serif;
     min-height: 100%;
 }
 
-nav{
+nav {
     height: 8vh;
-    box-shadow: 0px 6px 4px -2px rgba(0,0,0,0.18);
+    box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.18);
     display: flex;
     justify-content: space-between;
 }
 
-#logo{
+#logo {
     width: 40%;
     display: flex;
     align-items: center;
@@ -26,29 +27,29 @@ nav{
     position: relative;
 }
 
-#logo h2{
+#logo h2 {
     position: absolute;
     left: 2em;
     cursor: pointer;
 }
 
-#logo a{
+#logo a {
     text-decoration: none;
     color: black;
 }
 
-#heading{
+#heading {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
 }
 
-#heading h3{
+#heading h3 {
     letter-spacing: 1px;
 }
 
-#userNameSection{
+#userNameSection {
     width: 40%;
     display: flex;
     justify-content: flex-end;
@@ -58,22 +59,22 @@ nav{
     display: none;
 }
 
-#userNameSection h3{
+#userNameSection h3 {
     letter-spacing: 1px;
     margin-right: 1em;
 }
 
-#logoutBtn{
+#logoutBtn {
     cursor: pointer;
 }
 
-#logoutBtn::before{
+#logoutBtn::before {
     content: "\007C";
     padding-right: .5em;
     color: #7D99B5;
 }
 
-#logIn{
+#logIn {
     width: 40%;
     display: flex;
     justify-content: space-evenly;
@@ -81,36 +82,36 @@ nav{
     position: relative;
 }
 
-#logIn #login{
+#logIn #login {
     position: absolute;
     right: 2em;
     cursor: pointer;
 }
 
-#login a{
+#login a {
     text-decoration: none;
     color: black;
 }
 
-#logIn #account{
+#logIn #account {
     position: absolute;
     right: 6em;
     cursor: pointer;
 }
 
-#logIn #account a{
+#logIn #account a {
     text-decoration: none;
     color: black;
 }
 
-#logIn #login::before{
+#logIn #login::before {
     content: "\007C";
     padding-right: .5em;
     color: #7D99B5;
     cursor: auto;
 }
 
-#carSell{
+#carSell {
     background-color: rgba(255, 255, 255, 0.158);
     border: 1px solid grey;
     color: rgba(32, 32, 32, 0.863);
@@ -123,7 +124,7 @@ nav{
     margin-top: .2vh;
 }
 
-#carSell:hover{
+#carSell:hover {
     background-color: rgba(148, 147, 147, 0.308);
     cursor: pointer;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +17,7 @@
 </head>
 
 <body>
-    
+
     <nav>
 
         <section id="logo">
@@ -33,16 +34,16 @@
 
         <section id="userNameSection">
 
-            <h3 id ="nickName">Username here</h3>
+            <h3 id="nickName">Username here</h3>
 
-            <h3 id ="logoutBtn">Logout</h3>
+            <h3 id="logoutBtn">Logout</h3>
 
         </section>
 
         <section id="logIn">
 
             <h3 id="account"><a href="registration.html">Create account</a></h3>
-            
+
 
             <h3 id="login"><a class="button" href="#popup1">Log in</a></h3>
 
@@ -50,7 +51,99 @@
 
     </nav>
 
-    <section id = "addingSection">
+    <section id="addingSection">
+
+        <div id="addACar">
+
+            <form action="/nowhere">
+
+                <section id="firstForms">
+
+                    <div class="formOne">
+
+                        <label for="brandSelect">Brand</label>
+                        <select name="brandSelect" id="brandSelection">
+                            <option value="" disabled selected>Car brand</option>
+                            <option value="1">Audi</option>
+                            <option value="2">BMW</option>
+                        </select>
+
+                    </div>
+
+                    <div class="formTwo">
+
+                        <label for="modelSelect">Model</label>
+                        <select name="modelSelect" id="modelSelection">
+                            <option value="" disabled selected>Car model</option>
+                            <option value="1">A6</option>
+                            <option value="2">e30</option>
+                        </select>
+
+                    </div>
+
+                </section>
+
+                <section id="scdForms">
+
+                    <div class="formThree">
+
+                        <label for="generationSelect">Generation</label>
+                        <select name="generationSelect" id="generationSelection">
+                            <option value="" disabled selected>Car generation</option>
+                            <option value="1">I</option>
+                            <option value="2">II</option>
+                        </select>
+
+                    </div>
+
+                    <div class="formFour">
+
+                        <label for="fuelSelect">Fuel</label>
+                        <select name="fuelSelect" id="fuelSelection">
+                            <option value="" disabled selected>Select fuel</option>
+                            <option value="1">Diesel</option>
+                            <option value="2">Gasoline</option>
+                        </select>
+
+                    </div>
+
+                </section>
+
+                <section id="thirdForms">
+
+                    <div class="formFive">
+
+                        <label for="capacitySelect">Capacity</label>
+                        <select name="capacitySelect" id="capacitySelection">
+                            <option value="" disabled selected>Engine capacity</option>
+                            <option value="1">1600 cm<sup>3</sup></option>
+                            <option value="2">2000 cm<sup>3</sup></option>
+                        </select>
+
+                    </div>
+
+                    <div class="formSix">
+
+                        <label for="carMileage">Car mileage</label>
+                        <select name="carMileage" id="mileageSelection">
+                            <option value="" disabled selected>Select mileage</option>
+                            <option value="1">50 000 km</option>
+                            <option value="2">150 000 km</option>
+                        </select>
+
+                    </div>
+
+                </section>
+
+                <div id="sendBtn">
+
+                    <input type="submit" value="Show cars" id="sendForm">
+
+                </div>
+
+            </form>
+
+        </div>
 
     </section>
 
