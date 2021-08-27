@@ -18,3 +18,19 @@ logoutBtn.addEventListener('click', () => {
     window.localStorage.removeItem('userToken');
     location.href = "index.html";
 })
+
+// Secured endpoint TEST below
+
+// axios.get('http://localhost:8080/api/test', {
+//         headers: {
+//             Authorization: 'Bearer ' + rawToken
+//         }
+//     })
+//     .then(function(response) {
+//         console.log(response)
+//     })
+
+// .catch(function(error) {
+//     console.log(error);
+
+// });
