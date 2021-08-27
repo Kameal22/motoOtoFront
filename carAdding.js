@@ -12,19 +12,43 @@ const originAddingSelect = document.querySelector('#originAdding');
 const sendAddFormBtn = document.querySelector('#sendAddForm');
 
 brandAddingSelect.addEventListener('change', (event) => {
-    console.log(event.target.value);
+    // console.log(event.target.value);
 });
 
-// Getting car brand from API below
+// Getting car brand and model from API below
 
 axios.get('http://localhost:8080/api/cars/brands', )
     .then(function(response) {
         const brands = response.data
-        const audiBrand = response.data[0]
-        console.log(audiBrand);
+
+        brands.forEach((brand) => {
+            const newBrandOption = document.createElement('option');
+            const brandOptionText = document.createTextNode(brand)
+
+            newBrandOption.appendChild(brandOptionText);
+
+            newBrandOption.setAttribute('value', brand);
+
+            brandAddingSelect.appendChild(newBrandOption);
+        });
+
         axios.get('http://localhost:8080/api/cars/' + audiBrand + '/models', )
             .then(function(response) {
-                console.log(response)
+                const audiModels = response.data
+                for (let i = 0; i < audiModels.length; i++) {
+                    const model = audiModels[i]
+                }
+            })
+
+        .catch(function(error) {
+            console.log(error);
+
+        });
+
+        axios.get('http://localhost:8080/api/cars/' + bmwBrand + '/models', )
+            .then(function(response) {
+                const bmwModels = response.data
+                    // console.log(bmwModels);
             })
 
         .catch(function(error) {
@@ -37,5 +61,3 @@ axios.get('http://localhost:8080/api/cars/brands', )
     console.log(error);
 
 });
-
-//Getting car model based on selected brand below
