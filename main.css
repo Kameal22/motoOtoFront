@@ -135,6 +135,19 @@ label {
     height: 7vh;
 }
 
+#fourthAddForms .formAddSeven,
+.formAddEight {
+    width: 25%;
+}
+
+#fourthAddForms .formAddSeven #mileageInput {
+    height: 3.5vh;
+}
+
+#fourthAddForms .formAddEight #priceInput {
+    height: 3.5vh;
+}
+
 #addingOptions #sendAddBtn {
     width: 40%;
     margin: 6vh auto;
