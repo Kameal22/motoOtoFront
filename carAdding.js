@@ -11,26 +11,28 @@ const priceInput = document.querySelector('#priceInput');
 
 const sendAddFormBtn = document.querySelector('#sendAddForm');
 
-addingForm.addEventListener('submit', (e) => {
+addingForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    console.log(carAddedOptions)
+    console.log(carAddedOptions);
+    console.log(priceOfCar);
 
-    axios.post('http://localhost:8080/api/users/' + usersId + '/sale-announcements', {
-
-        headers: {
-            Authorization: 'Bearer ' + rawToken
+    axios.post('http://localhost:8080/api/users/' + usersId + '/sale-announcements',
+        {
+            "car": carAddedOptions,
+            "imageURL": null,
+            "price": priceOfCar
         },
-        "car": carAddedOptions,
-        "imageURL": null,
-        "price": priceOfCar
-    })
-
-    .then(function(response) {
+        {
+            headers: {
+                Authorization: 'Bearer ' + rawToken
+            }
+        })
+        .then(response => {
             console.log(response);
         })
-        .catch(function(error) {
-            console.log(error)
+        .catch(error => {
+            console.log(error.message)
         })
 })
 
@@ -43,8 +45,8 @@ for (let y = actualYear; y >= 1980; y--) {
 
 productionYearSelect.innerHTML = options
 
-axios.get('http://localhost:8080/api/cars/brands', )
-    .then(function(response) {
+axios.get('http://localhost:8080/api/cars/brands')
+    .then(function (response) {
         const brands = response.data
 
         brands.forEach((brand) => {
@@ -59,22 +61,19 @@ axios.get('http://localhost:8080/api/cars/brands', )
         });
 
     })
-
-.catch(function(error) {
-    console.log(error);
-
-});
+    .catch(function (error) {
+        console.log(error);
+    });
 
 
 
-brandAddingSelect.addEventListener('change', (event) => {
+brandAddingSelect.addEventListener('change', event => {
     const chosenBrand = event.target.value
 
     carAddedOptions["brand"] = chosenBrand;
 
-    axios.get('http://localhost:8080/api/cars/' + chosenBrand + '/models', )
-        .then(function(response) {
-
+    axios.get('http://localhost:8080/api/cars/' + chosenBrand + '/models')
+        .then(response => {
             modelAddingSelect.innerHTML = "";
 
             const chosenModels = response.data
@@ -89,41 +88,39 @@ brandAddingSelect.addEventListener('change', (event) => {
 
                 modelAddingSelect.appendChild(newModelOption);
             })
-
-            modelAddingSelect.addEventListener('change', (event) => {
+            modelAddingSelect.addEventListener('change', event => {
                 const selectedModel = event.target.value
                 carAddedOptions["model"] = selectedModel
             })
-
         })
 
-    .catch(function(error) {
-        console.log(error);
+        .catch(function (error) {
+            console.log(error);
 
-    });
+        });
 });
 
-productionYearSelect.addEventListener('change', (event) => {
+productionYearSelect.addEventListener('change', event => {
     const selectedYear = event.target.value;
     carAddedOptions["productionYear"] = parseInt(selectedYear);
 })
 
-generationAddingSelect.addEventListener('change', (event) => {
+generationAddingSelect.addEventListener('change', event => {
     const selectedGeneration = event.target.value;
     carAddedOptions["generation"] = selectedGeneration;
 })
 
-fuelAddingSelect.addEventListener('change', (event) => {
+fuelAddingSelect.addEventListener('change', event => {
     const selectedFuel = event.target.value;
     carAddedOptions["fuelType"] = selectedFuel;
 })
 
-mileageInput.addEventListener('input', (event) => {
+mileageInput.addEventListener('input', event => {
     const carMileage = parseInt(event.target.value);
     carAddedOptions["carMileage"] = carMileage;
 })
 
-priceInput.addEventListener('input', (event) => {
+priceInput.addEventListener('input', event => {
     const carPrice = parseInt(event.target.value);
     priceOfCar = carPrice;
 })
