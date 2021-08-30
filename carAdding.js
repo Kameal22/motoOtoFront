@@ -13,6 +13,25 @@ const sendAddFormBtn = document.querySelector('#sendAddForm');
 
 addingForm.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    console.log(carAddedOptions)
+
+    axios.post('http://localhost:8080/api/users/' + usersId + '/sale-announcements', {
+
+        headers: {
+            Authorization: 'Bearer ' + rawToken
+        },
+        "car": carAddedOptions,
+        "imageURL": null,
+        "price": priceOfCar
+    })
+
+    .then(function(response) {
+            console.log(response);
+        })
+        .catch(function(error) {
+            console.log(error)
+        })
 })
 
 const actualYear = new Date().getFullYear();
@@ -86,7 +105,7 @@ brandAddingSelect.addEventListener('change', (event) => {
 
 productionYearSelect.addEventListener('change', (event) => {
     const selectedYear = event.target.value;
-    carAddedOptions["productionYear"] = selectedYear;
+    carAddedOptions["productionYear"] = parseInt(selectedYear);
 })
 
 generationAddingSelect.addEventListener('change', (event) => {
@@ -106,8 +125,10 @@ mileageInput.addEventListener('input', (event) => {
 
 priceInput.addEventListener('input', (event) => {
     const carPrice = parseInt(event.target.value);
-    carAddedOptions["price"] = `${carPrice} $`;
+    priceOfCar = carPrice;
 })
+
+let priceOfCar = "";
 
 // Chosen car adding options :
 

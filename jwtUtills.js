@@ -1,5 +1,7 @@
 const rawToken = window.localStorage.getItem('userToken')
 
+let usersId = "";
+
 function getRawJwt() {
     console.log(rawToken);
 }
@@ -13,8 +15,12 @@ function getParsedJwt(rawToken) {
 
     const objectToken = JSON.parse(jsonPayload);
 
+    usersId = objectToken.id;
+
     return JSON.parse(jsonPayload);
 }
+
+getParsedJwt();
 
 function checkIfExpired(rawToken) {
     var base64Url = rawToken.split('.')[1];

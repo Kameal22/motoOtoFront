@@ -71,7 +71,7 @@
                         <div class="formAddOne">
 
                             <label for="productionYr">Production year</label>
-                            <select name="productionYr" id="productionYear">
+                            <select name="productionYr" id="productionYear" required>
                                 <option value="" disabled selected>Select year</option>
                             </select>
 
@@ -80,7 +80,7 @@
                         <div class="formAddTwo">
 
                             <label for="brandAdd">Brand</label>
-                            <select name="brandAdd" id="brandAdding">
+                            <select name="brandAdd" id="brandAdding" required>
                                 <option value="" disabled selected>Car brand</option>
                             </select>
 
@@ -93,7 +93,7 @@
                         <div class="formAddThree">
 
                             <label for="modelAdd">Model</label>
-                            <select name="modelAdd" id="modelAdding">
+                            <select name="modelAdd" id="modelAdding" required>
                                 <option value="" disabled selected>Car model</option>
                             </select>
 
@@ -102,7 +102,7 @@
                         <div class="formAddFour">
 
                             <label for="generationAdd">Generation</label>
-                            <select name="generationAdd" id="generationAdding">
+                            <select name="generationAdd" id="generationAdding" required>
                                 <option value="" disabled selected>Car generation</option>
                                 <option value="firstGen">1</option>
                             </select>
@@ -116,12 +116,13 @@
                         <div class="formAddFive">
 
                             <label for="fuelAdd">Fuel</label>
-                            <select name="fuelAdd" id="fuelAdding">
+                            <select name="fuelAdd" id="fuelAdding" required>
                                 <option value="" disabled selected>Car fuel</option>
-                                <option value ="Diesel">Diesel</option>
-                                <option value ="Gasoline">Gasoline</option>
-                                <option value ="Hybrid">Hybrid</option>
-                                <option value ="Electric">Electric</option>
+                                <option value ="PETROL">Petrol</option>
+                                <option value ="DIESEL">Diesel</option>
+                                <option value ="ELECTRIC">Electric</option>
+                                <option value ="LPG">LPG</option>
+                                <option value ="HYBRID">Hybrid</option>
                                 
                             </select>
 
@@ -130,7 +131,7 @@
                         <div class="formAddSix">
 
                             <label for="capacityAdd">Capacity</label>
-                            <select name="capacityAdd" id="capacityAdding">
+                            <select name="capacityAdd" id="capacityAdding" required>
                                 <option value="" disabled selected>Select capacity</option>
                                 <option value="1.0">1.0 cm<sup>3</sup>
                                 <option value="1.2">1.2 cm<sup>3</sup>
@@ -155,14 +156,14 @@
                         <div class="formAddSeven">
 
                             <label for="carMileage">Car mileage</label>
-                            <input type="text" id="mileageInput">
+                            <input type="text" id="mileageInput" required>
 
                         </div>
 
                         <div class="formAddEight">
 
                             <label for="carPrice">Price</label>
-                            <input type="text" id="priceInput">
+                            <input type="text" id="priceInput" required>
 
                         </div>
 
