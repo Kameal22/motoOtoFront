@@ -28,6 +28,8 @@ addingForm.addEventListener('submit', e => {
         })
         .then(response => {
             console.log(response);
+            announcementsCount++;
+            // location.href = "userIndex.html";
         })
         .catch(error => {
             console.log(error.message)

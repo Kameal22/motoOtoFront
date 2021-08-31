@@ -128,3 +128,22 @@ nav {
     background-color: rgba(148, 147, 147, 0.308);
     cursor: pointer;
 }
+
+#userSales {
+    background-color: rgba(255, 255, 255, 0.158);
+    border: 1px solid grey;
+    color: rgba(32, 32, 32, 0.863);
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: .2vh;
+    margin-left: 1em;
+}
+
+#userSales:hover {
+    background-color: rgba(148, 147, 147, 0.308);
+    cursor: pointer;
+}

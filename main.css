@@ -395,6 +395,45 @@ label {
     height: 40%;
 }
 
+#userSalesSection {
+    height: 90vh;
+    margin-top: 1vh;
+    background-image: url(userSales.jpg#);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
+}
+
+#firstSale {
+    width: 80%;
+    height: 25%;
+    margin-left: 4em;
+    background: rgba( 125, 153, 181, 0.25);
+    backdrop-filter: blur( 4px);
+    -webkit-backdrop-filter: blur( 4px);
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18);
+    margin-top: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+#firstSale div {
+    border-right: 1px solid rgba(255, 255, 255, 0.541);
+    width: 15%;
+    height: 80%;
+}
+
+#firstSale div:last-child {
+    border: none;
+}
+
 
 /* REGISTRATION */
 
