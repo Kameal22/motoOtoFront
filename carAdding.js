@@ -17,13 +17,11 @@ addingForm.addEventListener('submit', e => {
     console.log(carAddedOptions);
     console.log(priceOfCar);
 
-    axios.post('http://localhost:8080/api/users/' + usersId + '/sale-announcements',
-        {
+    axios.post('http://localhost:8080/api/users/' + usersId + '/sale-announcements', {
             "car": carAddedOptions,
             "imageURL": null,
             "price": priceOfCar
-        },
-        {
+        }, {
             headers: {
                 Authorization: 'Bearer ' + rawToken
             }
@@ -46,7 +44,7 @@ for (let y = actualYear; y >= 1980; y--) {
 productionYearSelect.innerHTML = options
 
 axios.get('http://localhost:8080/api/cars/brands')
-    .then(function (response) {
+    .then(function(response) {
         const brands = response.data
 
         brands.forEach((brand) => {
@@ -61,7 +59,7 @@ axios.get('http://localhost:8080/api/cars/brands')
         });
 
     })
-    .catch(function (error) {
+    .catch(function(error) {
         console.log(error);
     });
 
@@ -76,6 +74,14 @@ brandAddingSelect.addEventListener('change', event => {
         .then(response => {
             modelAddingSelect.innerHTML = "";
 
+            const firstModelOption = document.createElement('option');
+            const firstModelOptionText = document.createTextNode('choose model')
+
+            firstModelOption.appendChild(firstModelOptionText);
+            firstModelOption.setAttribute('value', 'choose model');
+
+            modelAddingSelect.prepend(firstModelOption);
+
             const chosenModels = response.data
 
             chosenModels.forEach((model) => {
@@ -88,16 +94,17 @@ brandAddingSelect.addEventListener('change', event => {
 
                 modelAddingSelect.appendChild(newModelOption);
             })
+
             modelAddingSelect.addEventListener('change', event => {
                 const selectedModel = event.target.value
                 carAddedOptions["model"] = selectedModel
             })
         })
 
-        .catch(function (error) {
-            console.log(error);
+    .catch(function(error) {
+        console.log(error);
 
-        });
+    });
 });
 
 productionYearSelect.addEventListener('change', event => {
