@@ -46,8 +46,6 @@ function parseJwt(token) {
         return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));
 
-    console.log(jsonPayload);
-
     return JSON.parse(jsonPayload);
 };
 

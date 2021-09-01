@@ -5,7 +5,6 @@ const logoutBtn = document.querySelector('#logoutBtn');
 
 if (localStorage.length === 1) {
     const usersNickname = getParsedJwt(rawToken);
-    console.log('User is logged in')
     loginSection.style.display = "none";
     userNameSection.style.display = "flex";
     userNameText.textContent = usersNickname.username;

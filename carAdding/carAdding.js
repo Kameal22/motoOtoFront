@@ -17,7 +17,7 @@ addingForm.addEventListener('submit', e => {
     console.log(carAddedOptions);
     console.log(priceOfCar);
 
-    axios.post('http://localhost:8080/api/users/' + usersId + '/sale-announcements', {
+    axios.post('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-announcements', {
             "car": carAddedOptions,
             "imageURL": null,
             "price": priceOfCar
@@ -28,8 +28,7 @@ addingForm.addEventListener('submit', e => {
         })
         .then(response => {
             console.log(response);
-            announcementsCount++;
-            // location.href = "userIndex.html";
+            location.href = "/motoOto/userCars/usersAnnouncements.html";
         })
         .catch(error => {
             console.log(error.message)
