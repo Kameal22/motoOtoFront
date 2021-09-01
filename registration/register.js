@@ -31,7 +31,7 @@ registrationForm.addEventListener('submit', (f) => {
                 const token = response.data;
                 parseJwt(token);
                 window.localStorage.setItem('userToken', token);
-                location.href = "userIndex.html";
+                location.href = "/motoOto/login/userIndex.html";
             })
             .catch(function(error) {
                 console.log(error);

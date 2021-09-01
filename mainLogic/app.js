@@ -16,7 +16,7 @@ if (localStorage.length === 1) {
 
 logoutBtn.addEventListener('click', () => {
     window.localStorage.removeItem('userToken');
-    location.href = "index.html";
+    location.href = "/motoOto/landingPage/index.html";
 })
 
 // Secured endpoint TEST below

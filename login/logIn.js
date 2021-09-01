@@ -15,7 +15,7 @@ loginForm.addEventListener('submit', (e) => {
             const token = response.data;
             console.log(token);
             window.localStorage.setItem('userToken', token);
-            location.href = "userIndex.html";
+            location.href = "/motoOto/login/userIndex.html";
         })
 
     .catch(function(error) {

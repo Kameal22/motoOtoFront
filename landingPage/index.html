@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="favicon.ico">
-    <title>MotoOto - Search for cars, buy, lease, sell</title>
+    <link rel="stylesheet" href="/motoOto/styles/nav.css">
+    <link rel="stylesheet" href="/motoOto/styles/main.css">
+    <link rel="stylesheet" href="/motoOto/styles/responsive.css">
+    <link rel="icon" href="/motoOto/styles/favicon.ico">
+    <title>MotoOto - Search for cars, buy, sell</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 
@@ -23,7 +24,7 @@
 
         <section id="logo">
 
-            <h2 class="companyLogo"><a href="index.html">motoOto</a></h2>
+            <h2 class="companyLogo"><a href="/motoOto/landingPage/index.html">motoOto</a></h2>
 
         </section>
 
@@ -39,15 +40,11 @@
 
             <h3 id="logoutBtn">Logout</h3>
 
-            <a href="carAdding.html"><button id="carSell">Sell your car</button></a>
-
-            <a href="usersAnnouncements.html"><button id="userSales">Your sales</button></a>
-
         </section>
 
         <section id="logIn">
 
-            <h3 id="account"><a href="registration.html">Create account</a></h3>
+            <h3 id="account"><a href="/motoOto/registration/registration.html">Create account</a></h3>
 
 
             <h3 id="login"><a class="button" href="#popup1">Log in</a></h3>
@@ -285,6 +282,8 @@
 
                             <input type="password" id="passwdLog" name="passwdLog" placeholder="password">
 
+                            <p class="passwdLogErr"></p>
+
                         </div>
 
                         <button type="submit" id="loginBtn">Login</button>
@@ -318,9 +317,9 @@
 
     </footer>
 
-    <script src="jwtUtills.js"></script>
-    <script src="logIn.js"></script>
-    <script src="app.js"></script>
+    <script src="/motoOto/jwtUtility/jwtUtills.js"></script>
+    <script src="/motoOto/login/logIn.js"></script>
+    <script src="/motoOto/mainLogic/app.js"></script>
 </body>
 
 </html>
