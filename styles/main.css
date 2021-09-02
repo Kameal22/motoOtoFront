@@ -422,6 +422,7 @@ label {
     justify-content: space-around;
     align-items: center;
     color: white;
+    display: none;
 }
 
 #firstSale div {
@@ -429,6 +430,13 @@ label {
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+#annHeading {
+    color: white;
+    letter-spacing: 1px;
+    margin-top: 10vh;
+    font-size: 2em;
 }
 
 

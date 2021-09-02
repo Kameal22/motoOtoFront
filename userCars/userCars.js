@@ -1,4 +1,5 @@
 const firstSale = document.querySelector('#firstSale');
+const saleInfo = document.querySelector('#annHeading');
 
 const imgSale = document.querySelector('#imgSale');
 const brandSale = document.querySelector('#brandSale');
@@ -12,6 +13,11 @@ axios.get('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-ann
         const importedCarPrice = response.data[0].price
         const importedCarImg = response.data[0].imageURL
         const importedCar = response.data[0].car
+
+        if (response.data[0] !== null) {
+            saleInfo.style.display = "none";
+            firstSale.style.display = "flex";
+        }
 
         const importedBrand = importedCar.brand;
         const importedModel = importedCar.model;
