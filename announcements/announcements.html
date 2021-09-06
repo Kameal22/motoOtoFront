@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Car selling service">
+    <meta name="author" content="Kamil Czyżewski, Łukasz Malinowski">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/motoOto/styles/nav.css">
+    <link rel="stylesheet" href="/motoOto/styles/main.css">
+    <link rel="icon" href="/motoOto/styles/favicon.ico">
+    <title>MotoOto - Search for cars, buy, lease, sell</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+    <nav>
+
+        <section id="logo">
+
+            <h2 class="companyLogo"><a href="/motoOto/login/userIndex.html">motoOto</a></h2>
+
+        </section>
+
+        <section id="heading">
+
+            <h3>Buy & Sell cars online!</h3>
+
+        </section>
+
+        <section id="userNameSection">
+
+            <h3 id="nickName">Username here</h3>
+
+            <h3 id="logoutBtn">Logout</h3>
+
+            <a href="/motoOto/carAdding/carAdding.html"><button id="carSell">Sell your car</button></a>
+
+            <a href="/motoOto/userCars/usersAnnouncements.html"><button id="userSales">Your sales</button></a>
+
+        </section>
+
+        <section id="logIn">
+
+            <h3 id="account"><a href="/motoOto/registration/registration.html">Create account</a></h3>
+
+
+            <h3 id="login"><a class="button" href="#popup1">Log in</a></h3>
+
+        </section>
+
+    </nav>
+
+    <main>
+
+        <section id="mainSalesSection">
+
+            <div id="announcement">
+
+                <div class="imgAnnouncement">aaaaaaaaaa</div>
+                <div class="BrandAnnouncement">bbbbbbbbbbbb</div>
+                <div class="ModelAnnouncement">cccccccc</div>
+                <div class="generationAnnouncement">ddddddddddd</div>
+                <div class="capacityAnnouncement">eeeeeeeee</div>
+                <div class="mileageAnnouncement">ffffffff</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div id="footerLeft">
+
+            <h4>Car sales web service</h4>
+
+            <p>Based in Poland</p>
+
+        </div>
+
+        <div id="footerRight">
+
+            <h4>Designed and created by:</h4>
+
+            <p>Kamil Czyżewski & Łukasz Malinowski</p>
+
+        </div>
+
+
+    </footer>
+
+    <script src="/motoOto/jwtUtility/jwtUtills.js"></script>
+    <script src="/motoOto/login/logIn.js"></script>
+    <script src="/motoOto/mainLogic/app.js"></script>
+</body>
+
+</html>
