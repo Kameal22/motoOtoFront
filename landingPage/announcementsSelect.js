@@ -1,8 +1,14 @@
+const mainSearchingForm = document.querySelector('#saleSearch');
+
 const brandSearching = document.querySelector('#brandSelection');
 const modelSearching = document.querySelector('#modelSelection');
 const generationSearching = document.querySelector('#generationSelection');
 const fuelSearching = document.querySelector('#fuelSelection');
 const capacitySearching = document.querySelector('#capacitySelection');
+
+const carSearchingOptions = {
+
+};
 
 // Figure out a mileage search with widełki.
 
@@ -28,6 +34,21 @@ axios.get('http://localhost:8080/api/cars/brands')
 
 brandSearching.addEventListener('change', event => {
     const chosenBrandLand = event.target.value
+
+    carSearchingOptions["brand"] = chosenBrandLand;
+
+    // Sale announcements with specified Brand :
+
+    // FOREACH option create new section in announcements.html
+
+    axios.get('http://localhost:8080/api/sale-announcements?brand=' + carSearchingOptions.brand)
+        .then(function(response) {
+            console.log(response)
+
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
 
     axios.get('http://localhost:8080/api/cars/' + chosenBrandLand + '/models')
         .then(response => {
@@ -55,7 +76,9 @@ brandSearching.addEventListener('change', event => {
             })
 
             modelSearching.addEventListener('change', event => {
-                const selectedModel = event.target.value
+                const chosenModelLand = event.target.value
+
+                carSearchingOptions["model"] = chosenModelLand;
             })
         })
 
@@ -64,3 +87,37 @@ brandSearching.addEventListener('change', event => {
 
     });
 });
+
+generationSearching.addEventListener('change', event => {
+    const chosenGenerationLand = event.target.value;
+
+    carSearchingOptions["generation"] = chosenGenerationLand
+});
+
+fuelSearching.addEventListener('change', event => {
+    const chosenFuelLand = event.target.value;
+
+    carSearchingOptions["fuel"] = chosenFuelLand
+});
+
+capacitySearching.addEventListener('change', event => {
+    const chosenCapacityLand = event.target.value;
+
+    carSearchingOptions["capacity"] = chosenCapacityLand
+});
+
+mainSearchingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    console.log(carSearchingOptions.brand);
+})
+
+// Sale announcements endpoint :
+
+// axios.get('http://localhost:8080/api/sale-announcements')
+//     .then(function(response) {
+//         console.log(response)
+
+//     })
+//     .catch(function(error) {
+//         console.log(error);
+//     });

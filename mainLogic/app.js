@@ -18,16 +18,6 @@ logoutBtn.addEventListener('click', () => {
     location.href = "/motoOto/landingPage/index.html";
 })
 
-//Main car searching option
-
-const saleSearchForm = document.querySelector('#saleSearch');
-
-saleSearchForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    location.href = "/motoOto/announcements/announcements.html";
-})
-
-
 // Secured endpoint TEST below
 
 // axios.get('http://localhost:8080/api/test', {

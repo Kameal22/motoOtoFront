@@ -64,8 +64,6 @@ axios.get('http://localhost:8080/api/cars/brands')
         console.log(error);
     });
 
-
-
 brandAddingSelect.addEventListener('change', event => {
     const chosenBrand = event.target.value
 
