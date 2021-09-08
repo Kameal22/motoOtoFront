@@ -10,8 +10,6 @@ const carSearchingOptions = {
 
 };
 
-// Figure out a mileage search with widełki.
-
 axios.get('http://localhost:8080/api/cars/brands')
     .then(function(response) {
         const brands = response.data
@@ -39,11 +37,30 @@ brandSearching.addEventListener('change', event => {
 
     // Sale announcements with specified Brand :
 
-    // FOREACH option create new section in announcements.html
-
     axios.get('http://localhost:8080/api/sale-announcements?brand=' + carSearchingOptions.brand)
         .then(function(response) {
-            console.log(response)
+
+            const brandsResponse = response.data;
+
+            brandsResponse.forEach((response) => {
+
+                const brandCars = response.car.brand;
+
+                console.log(brandCars);
+
+                const responseDiv = document.createElement('div');
+
+                responseDiv.className = ('announcement');
+
+                const responseDivBrand = document.createElement('div');
+
+                responseDivBrand.innerHTML = brandCars;
+
+                console.log(responseDivBrand);
+
+                mainSalesSection.append(responseDiv);
+
+            })
 
         })
         .catch(function(error) {
@@ -108,7 +125,7 @@ capacitySearching.addEventListener('change', event => {
 
 mainSearchingForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(carSearchingOptions.brand);
+    location.href = "/motoOto/announcements/announcements.html";
 })
 
 // Sale announcements endpoint :
