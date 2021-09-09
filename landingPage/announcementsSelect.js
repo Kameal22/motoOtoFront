@@ -42,25 +42,9 @@ brandSearching.addEventListener('change', event => {
 
             const brandsResponse = response.data;
 
-            brandsResponse.forEach((response) => {
+            console.log(brandsResponse)
 
-                const brandCars = response.car.brand;
-
-                console.log(brandCars);
-
-                const responseDiv = document.createElement('div');
-
-                responseDiv.className = ('announcement');
-
-                const responseDivBrand = document.createElement('div');
-
-                responseDivBrand.innerHTML = brandCars;
-
-                console.log(responseDivBrand);
-
-                mainSalesSection.append(responseDiv);
-
-            })
+            window.localStorage.setItem('brands', JSON.stringify(brandsResponse));
 
         })
         .catch(function(error) {
