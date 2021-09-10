@@ -3,7 +3,7 @@ const userNameSection = document.querySelector('#userNameSection');
 const userNameText = document.querySelector('#nickName');
 const logoutBtn = document.querySelector('#logoutBtn');
 
-if (localStorage.length === 1) {
+if (window.localStorage.userToken !== null) {
     const usersNickname = getParsedJwt(rawToken);
     loginSection.style.display = "none";
     userNameSection.style.display = "flex";

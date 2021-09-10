@@ -10,6 +10,8 @@ const carSearchingOptions = {
 
 };
 
+// Send whole object at the end of this script and then work with what You got (what user chose to search for);
+
 axios.get('http://localhost:8080/api/cars/brands')
     .then(function(response) {
         const brands = response.data
@@ -111,6 +113,8 @@ mainSearchingForm.addEventListener('submit', (e) => {
     e.preventDefault();
     location.href = "/motoOto/announcements/announcements.html";
 })
+
+console.log(carSearchingOptions);
 
 // Sale announcements endpoint :
 
