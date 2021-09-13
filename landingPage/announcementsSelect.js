@@ -6,10 +6,6 @@ const generationSearching = document.querySelector('#generationSelection');
 const fuelSearching = document.querySelector('#fuelSelection');
 const capacitySearching = document.querySelector('#capacitySelection');
 
-const carSearchingOptions = {
-
-};
-
 // Send whole object at the end of this script and then work with what You got (what user chose to search for);
 
 axios.get('http://localhost:8080/api/cars/brands')
@@ -35,24 +31,6 @@ axios.get('http://localhost:8080/api/cars/brands')
 brandSearching.addEventListener('change', event => {
     const chosenBrandLand = event.target.value
 
-    carSearchingOptions["brand"] = chosenBrandLand;
-
-    // Sale announcements with specified Brand :
-
-    axios.get('http://localhost:8080/api/sale-announcements?brand=' + carSearchingOptions.brand)
-        .then(function(response) {
-
-            const brandsResponse = response.data;
-
-            console.log(brandsResponse)
-
-            window.localStorage.setItem('brands', JSON.stringify(brandsResponse));
-
-        })
-        .catch(function(error) {
-            console.log(error);
-        });
-
     axios.get('http://localhost:8080/api/cars/' + chosenBrandLand + '/models')
         .then(response => {
             modelSearching.innerHTML = ""
@@ -62,6 +40,8 @@ brandSearching.addEventListener('change', event => {
 
             firstModelOptionLand.appendChild(firstModelOptionTextLand);
             firstModelOptionLand.setAttribute('value', 'choose model');
+
+            firstModelOptionLand.disabled = true
 
             modelSearching.prepend(firstModelOptionLand);
 
@@ -77,12 +57,6 @@ brandSearching.addEventListener('change', event => {
 
                 modelSearching.appendChild(newModelOptionLand);
             })
-
-            modelSearching.addEventListener('change', event => {
-                const chosenModelLand = event.target.value
-
-                carSearchingOptions["model"] = chosenModelLand;
-            })
         })
 
     .catch(function(error) {
@@ -91,30 +65,17 @@ brandSearching.addEventListener('change', event => {
     });
 });
 
-generationSearching.addEventListener('change', event => {
-    const chosenGenerationLand = event.target.value;
+mainSearchingForm.addEventListener('submit', (f) => {
+    f.preventDefault();
 
-    carSearchingOptions["generation"] = chosenGenerationLand
-});
+    let carOptionsData = new FormData(mainSearchingForm);
+    for (const value of carOptionsData) {
+        console.log(value[1])
+    }
 
-fuelSearching.addEventListener('change', event => {
-    const chosenFuelLand = event.target.value;
-
-    carSearchingOptions["fuel"] = chosenFuelLand
-});
-
-capacitySearching.addEventListener('change', event => {
-    const chosenCapacityLand = event.target.value;
-
-    carSearchingOptions["capacity"] = chosenCapacityLand
-});
-
-mainSearchingForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    location.href = "/motoOto/announcements/announcements.html";
+    // location.href = `/motoOto/announcements/announcements.html?brand=${brandSearching.value}&model=${modelSearching.value}
+    // &generation=${generationSearching.value}&fuel=${fuelSearching.value}&capacity=${capacitySearching.value}`;
 })
-
-console.log(carSearchingOptions);
 
 // Sale announcements endpoint :
 
