@@ -65,25 +65,36 @@ brandSearching.addEventListener('change', event => {
     });
 });
 
+let searchParams = `/motoOto/announcements/announcements.html?`
+
 mainSearchingForm.addEventListener('submit', (f) => {
     f.preventDefault();
 
-    let carOptionsData = new FormData(mainSearchingForm);
-    for (const value of carOptionsData) {
-        console.log(value[1])
+    searchParams = `/motoOto/announcements/announcements.html?`
+
+    if (!searchParams.includes(brandSearching.value)) {
+        searchParams += `&brand=${brandSearching.value}`
     }
 
-    // location.href = `/motoOto/announcements/announcements.html?brand=${brandSearching.value}&model=${modelSearching.value}
-    // &generation=${generationSearching.value}&fuel=${fuelSearching.value}&capacity=${capacitySearching.value}`;
+    if (!searchParams.includes(modelSearching.value)) {
+        searchParams += `&model=${modelSearching.value}`
+    }
+
+    if (!searchParams.includes(generationSearching.value)) {
+        searchParams += `&generation=${generationSearching.value}`
+    }
+
+    if (!searchParams.includes(fuelSearching.value)) {
+        searchParams += `&fuel=${fuelSearching.value}`
+    }
+
+    if (!searchParams.includes(capacitySearching.value)) {
+        searchParams += `&capacity=${capacitySearching.value}`
+    }
+
+    searchParams = searchParams.slice(0, 42) + searchParams.slice(43);
+
+    console.log(searchParams)
+
+    // location.href = searchParams;
 })
-
-// Sale announcements endpoint :
-
-// axios.get('http://localhost:8080/api/sale-announcements')
-//     .then(function(response) {
-//         console.log(response)
-
-//     })
-//     .catch(function(error) {
-//         console.log(error);
-//     });

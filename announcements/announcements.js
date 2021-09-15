@@ -7,9 +7,7 @@ let generation = params.get('generation');
 let fuel = params.get('fuel');
 let capacity = params.get('capacity');
 
-console.log(brand, model, generation, fuel, capacity);
-
-axios.get(`http://localhost:8080/api/sale-announcements?brand=${brand}&model=${model}`)
+axios.get(`http://localhost:8080/api/sale-announcements?brand=${brand}`)
     .then(function(response) {
         console.log(response)
     })
