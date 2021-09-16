@@ -33,7 +33,6 @@ brandSearching.addEventListener('change', event => {
 
     axios.get('http://localhost:8080/api/cars/' + chosenBrandLand + '/models')
         .then(response => {
-            modelSearching.innerHTML = ""
 
             const firstModelOptionLand = document.createElement('option');
             const firstModelOptionTextLand = document.createTextNode('choose model');
@@ -96,5 +95,5 @@ mainSearchingForm.addEventListener('submit', (f) => {
 
     console.log(searchParams)
 
-    // location.href = searchParams;
+    location.href = searchParams;
 })

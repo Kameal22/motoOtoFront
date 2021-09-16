@@ -324,11 +324,11 @@ label {
     justify-content: space-between;
 }
 
-#firstCarRan .carPhoto {
+#firstCarRan .firstCarPhoto {
     height: 60%;
 }
 
-#firstCarRan .carDescription {
+#firstCarRan .firstCarDescription {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -346,11 +346,11 @@ label {
     justify-content: space-between;
 }
 
-#scdCarRan .carPhoto {
+#scdCarRan .scdCarPhoto {
     height: 60%;
 }
 
-#scdCarRan .carDescription {
+#scdCarRan .scdCarDescription {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -363,11 +363,11 @@ label {
     justify-content: space-between;
 }
 
-#thirdCarRan .carPhoto {
+#thirdCarRan .thirdCarPhoto {
     height: 60%;
 }
 
-#thirdCarRan .carDescription {
+#thirdCarRan .thirdCarDescription {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -384,11 +384,11 @@ label {
     justify-content: space-between;
 }
 
-#fourthCarRan .carPhoto {
+#fourthCarRan .fourthCarPhoto {
     height: 60%;
 }
 
-#fourthCarRan .carDescription {
+#fourthCarRan .fourthCarDescription {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
