@@ -302,37 +302,53 @@ label {
 
 #scdSection {
     margin-top: 2vh;
-    height: 90vh;
+    min-height: 90vh;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #7d99b54b;
 }
 
-#scdSection div {
+.landDivs {
     width: 45%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
 }
 
-#scdSection #firstCarRan {
+.landMainDivs {
     border-bottom: 1px solid grey;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-#firstCarRan .firstCarPhoto {
+.landMainPhoto {
     height: 60%;
+    width: 80%;
 }
 
-#firstCarRan .firstCarDescription {
+.landMainDescription {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 40%;
+}
+
+.bmvClass {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid blue;
+}
+
+.ymfClass {
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 #scdSection #scdCarRan {
@@ -393,6 +409,12 @@ label {
     flex-direction: column;
     justify-content: space-around;
     height: 40%;
+}
+
+.landingImgs {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 #userSalesSection {
