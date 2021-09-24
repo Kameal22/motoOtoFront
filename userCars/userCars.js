@@ -1,103 +1,84 @@
-const firstSale = document.querySelector('#firstSale');
-const scdSale = document.querySelector('#scdSale');
-const thirdSale = document.querySelector('#thirdSale');
+const mainUserSalesDiv = document.querySelector('#userSalesSection');
 
 const saleInfo = document.querySelector('#annHeading');
 
-//first sale
-const imgSale = document.querySelector('#imgSale');
-const brandSale = document.querySelector('#brandSale');
-const modelSale = document.querySelector('#modelSale');
-const mileageSale = document.querySelector('#mileageSale');
-const priceSale = document.querySelector('#priceSale');
-
-//scd sale
-const scdImgSale = document.querySelector('#scdImgSale');
-const scdBrandSale = document.querySelector('#scdBrandSale');
-const scdModelSale = document.querySelector('#scdModelSale');
-const scdMileageSale = document.querySelector('#scdMileageSale');
-const scdPriceSale = document.querySelector('#scdPriceSale');
-
-//third sale
-const thirdImgSale = document.querySelector('#thirdImgSale');
-const thirdBrandSale = document.querySelector('#thirdBrandSale');
-const thirdModelSale = document.querySelector('#thirdModelSale');
-const thirdMileageSale = document.querySelector('#thirdMileageSale');
-const thirdPriceSale = document.querySelector('#thirdPriceSale');
-
 axios.get('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-announcements')
     .then(function(response) {
 
-        const importedCarPrice = response.data[0].price
-        const importedCarImg = response.data[0].imageURL
-        const importedCar = response.data[0].car
+        const userSales = response.data
 
-        if (response.data[0] !== null) {
-            saleInfo.style.display = "none";
-            firstSale.style.display = "flex";
-        }
+        userSales.slice(-3).forEach((sale) => {
 
-        const importedBrand = importedCar.brand;
-        const importedModel = importedCar.model;
-        const importedMileage = importedCar.carMileage;
+            const saleDiv = document.createElement('div');
 
-        imgSale.innerHTML = "IMAGE HERE";
-        brandSale.innerHTML = importedBrand;
-        modelSale.innerHTML = importedModel;
-        mileageSale.innerHTML = `${importedMileage} km`;
-        priceSale.innerHTML = `${importedCarPrice} $`;
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+            const salePrice = sale.price
+            const saleImg = sale.imageURL
+            const saleCar = sale.car
 
-axios.get('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-announcements')
-    .then(function(response) {
+            if (sale !== null) {
+                saleInfo.style.display = "none";
+                saleDiv.style.display = "flex";
+            }
 
-        const scdImportedCarPrice = response.data[1].price
-        const scdImportedCarImg = response.data[1].imageURL
-        const scdImportedCar = response.data[1].car
+            const saleBrand = saleCar.brand
+            const saleModel = saleCar.model
+            const saleMileage = saleCar.carMileage
 
-        if (response.data[1] !== null) {
-            saleInfo.style.display = "none";
-            scdSale.style.display = "flex";
-        }
+            const saleImgDiv = document.createElement('div');
+            const saleBrandDiv = document.createElement('div');
+            const saleModelDiv = document.createElement('div');
+            const saleMileageDiv = document.createElement('div');
+            const salePriceDiv = document.createElement('div');
 
-        const scdImportedBrand = scdImportedCar.brand;
-        const scdImportedModel = scdImportedCar.model;
-        const scdImportedMileage = scdImportedCar.carMileage;
+            saleImgDiv.className = ('userSaleDiv');
+            saleBrandDiv.className = ('userSaleDiv');
+            saleModelDiv.className = ('userSaleDiv');
+            saleMileageDiv.className = ('userSaleDiv');
+            salePriceDiv.className = ('userSaleDiv');
 
-        scdImgSale.innerHTML = "IMAGE HERE";
-        scdBrandSale.innerHTML = scdImportedBrand;
-        scdModelSale.innerHTML = scdImportedModel;
-        scdMileageSale.innerHTML = `${scdImportedMileage} km`;
-        scdPriceSale.innerHTML = `${scdImportedCarPrice} $`;
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
+            saleDiv.className = ('userSale');
 
-axios.get('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-announcements')
-    .then(function(response) {
+            saleImgDiv.innerHTML = "Image here";
+            saleBrandDiv.innerHTML = saleBrand;
+            saleModelDiv.innerHTML = saleModel;
+            saleMileageDiv.innerHTML = `${saleMileage} km`;
+            salePriceDiv.innerHTML = `${salePrice}$`;
 
-        const thirdImportedCarPrice = response.data[2].price
-        const thirdImportedCarImg = response.data[2].imageURL
-        const thirdImportedCar = response.data[2].car
+            const deleteBtn = document.createElement('h3');
 
-        if (response.data[2] !== null) {
-            saleInfo.style.display = "none";
-            thirdSale.style.display = "flex";
-        }
+            const editBtn = document.createElement('h3');
 
-        const thirdImportedBrand = thirdImportedCar.brand;
-        const thirdImportedModel = thirdImportedCar.model;
-        const thirdImportedMileage = thirdImportedCar.carMileage;
+            editBtn.innerHTML = "o";
 
-        thirdImgSale.innerHTML = "IMAGE HERE";
-        thirdBrandSale.innerHTML = thirdImportedBrand;
-        thirdModelSale.innerHTML = thirdImportedModel;
-        thirdMileageSale.innerHTML = `${thirdImportedMileage} km`;
-        thirdPriceSale.innerHTML = `${thirdImportedCarPrice} $`;
+            deleteBtn.innerHTML = "x";
+
+            deleteBtn.className = ('userSaleDelete');
+
+            editBtn.className = ('userSaleEdit');
+
+            deleteBtn.addEventListener('mouseover', () => {
+                deleteBtn.textContent = "delete";
+                editBtn.style.right = "4.5em";
+            })
+
+            deleteBtn.addEventListener('mouseleave', () => {
+                deleteBtn.textContent = "x";
+                editBtn.style.right = "2em";
+            })
+
+            editBtn.addEventListener('mouseover', () => {
+                editBtn.textContent = "edit";
+            })
+
+            editBtn.addEventListener('mouseleave', () => {
+                editBtn.textContent = "o";
+            })
+
+            saleDiv.append(saleImgDiv, saleBrandDiv, saleModelDiv, saleMileageDiv, salePriceDiv, editBtn, deleteBtn);
+
+            mainUserSalesDiv.append(saleDiv)
+
+        })
     })
     .catch(function(error) {
         console.log(error);
