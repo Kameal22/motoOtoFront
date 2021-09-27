@@ -7,8 +7,6 @@ let generation = params.get('generation');
 let fuel = params.get('fuel');
 let capacity = params.get('capacity');
 
-console.log(brand, model, generation, fuel, capacity)
-
 let axiosDefault = `http://localhost:8080/api/sale-announcements?`
 
 if (brand !== null) {
@@ -32,60 +30,63 @@ if (capacity !== null) {
 }
 
 axios.get(axiosDefault)
-    .then(function(response) {
-        const carsResponse = response.data
+    .then(displayAnnouncements)
 
-        carsResponse.forEach((car) => {
+.catch(error => {
+    console.log(error)
+})
 
-            const imageName = car.imageURL
-            const brandName = car.car.brand
-            const modelName = car.car.model
-            const productionName = car.car.productionYear
-            const priceName = car.price
+function displayAnnouncements(response) {
+    const carsResponse = response.data
 
-            // main div
-            const newSaleDiv = document.createElement('div');
+    carsResponse.forEach((car) => {
 
-            // children of main div
-            const newImageDiv = document.createElement('div');
-            const newBrandDiv = document.createElement('div');
-            const newModelDiv = document.createElement('div');
-            const newProductionDiv = document.createElement('div');
-            const newPriceDiv = document.createElement('div');
+        const imageName = car.imageURL
+        const brandName = car.car.brand
+        const modelName = car.car.model
+        const productionName = car.car.productionYear
+        const priceName = car.price
 
-            //Inside of main div's child
-            const newImageImage = document.createElement('img');
-            const newBrandText = document.createElement('h2');
-            const newModelText = document.createElement('h2');
-            const newProductionText = document.createElement('h2');
-            const newPriceText = document.createElement('h2');
+        // main div
+        const newSaleDiv = document.createElement('div');
 
-            newImageImage.src = imageName;
-            newBrandText.innerHTML = brandName;
-            newModelText.innerHTML = modelName;
-            newProductionText.innerHTML = productionName;
-            newPriceText.innerHTML = `${priceName} $`;
+        // children of main div
+        const newImageDiv = document.createElement('div');
+        const newBrandDiv = document.createElement('div');
+        const newModelDiv = document.createElement('div');
+        const newProductionDiv = document.createElement('div');
+        const newPriceDiv = document.createElement('div');
 
-            newImageImage.className = ('saleImage');
+        //Inside of main div's child
+        const newImageImage = document.createElement('img');
+        const newBrandText = document.createElement('h2');
+        const newModelText = document.createElement('h2');
+        const newProductionText = document.createElement('h2');
+        const newPriceText = document.createElement('h2');
 
-            newImageDiv.append(newImageImage);
-            newBrandDiv.append(newBrandText);
-            newModelDiv.append(newModelText);
-            newProductionDiv.append(newProductionText);
-            newPriceDiv.append(newPriceText);
+        newImageImage.src = imageName;
+        newBrandText.innerHTML = brandName;
+        newModelText.innerHTML = modelName;
+        newProductionText.innerHTML = productionName;
+        newPriceText.innerHTML = `${priceName} $`;
 
-            newSaleDiv.append(newImageDiv);
-            newSaleDiv.append(newBrandDiv);
-            newSaleDiv.append(newModelDiv);
-            newSaleDiv.append(newProductionDiv);
-            newSaleDiv.append(newPriceDiv);
+        newImageImage.className = ('saleImage');
 
-            newSaleDiv.className = ('announcement');
+        newImageDiv.append(newImageImage);
+        newBrandDiv.append(newBrandText);
+        newModelDiv.append(newModelText);
+        newProductionDiv.append(newProductionText);
+        newPriceDiv.append(newPriceText);
 
-            mainSalesSection.append(newSaleDiv);
+        newSaleDiv.append(newImageDiv);
+        newSaleDiv.append(newBrandDiv);
+        newSaleDiv.append(newModelDiv);
+        newSaleDiv.append(newProductionDiv);
+        newSaleDiv.append(newPriceDiv);
 
-        })
+        newSaleDiv.className = ('announcement');
+
+        mainSalesSection.append(newSaleDiv);
+
     })
-    .catch(function(error) {
-        console.log(error)
-    })
+}

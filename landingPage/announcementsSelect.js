@@ -6,8 +6,6 @@ const generationSearching = document.querySelector('#generationSelection');
 const fuelSearching = document.querySelector('#fuelSelection');
 const capacitySearching = document.querySelector('#capacitySelection');
 
-// Send whole object at the end of this script and then work with what You got (what user chose to search for);
-
 axios.get('http://localhost:8080/api/cars/brands')
     .then(function(response) {
         const brands = response.data

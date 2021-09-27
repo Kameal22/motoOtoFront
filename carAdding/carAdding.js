@@ -11,6 +11,14 @@ const priceInput = document.querySelector('#priceInput');
 
 const sendAddFormBtn = document.querySelector('#sendAddForm');
 
+let priceOfCar = "";
+
+// Chosen car adding options :
+
+carAddedOptions = {
+
+}
+
 addingForm.addEventListener('submit', e => {
     e.preventDefault();
 
@@ -45,7 +53,7 @@ for (let y = actualYear; y >= 1980; y--) {
 productionYearSelect.innerHTML = options
 
 axios.get('http://localhost:8080/api/cars/brands')
-    .then(function(response) {
+    .then(response => {
         const brands = response.data
 
         brands.forEach((brand) => {
@@ -60,7 +68,7 @@ axios.get('http://localhost:8080/api/cars/brands')
         });
 
     })
-    .catch(function(error) {
+    .catch(error => {
         console.log(error);
     });
 
@@ -100,7 +108,7 @@ brandAddingSelect.addEventListener('change', event => {
             })
         })
 
-    .catch(function(error) {
+    .catch(error => {
         console.log(error);
 
     });
@@ -130,11 +138,3 @@ priceInput.addEventListener('input', event => {
     const carPrice = parseInt(event.target.value);
     priceOfCar = carPrice;
 })
-
-let priceOfCar = "";
-
-// Chosen car adding options :
-
-carAddedOptions = {
-
-}
