@@ -26,14 +26,13 @@ registrationForm.addEventListener('submit', (f) => {
                 email: emailReg,
                 password: passwordReg,
             })
-            .then(function(response) {
-                console.log(response);
+            .then(response => {
                 const token = response.data;
                 parseJwt(token);
                 window.localStorage.setItem('userToken', token);
                 location.href = "/motoOto/login/userIndex.html";
             })
-            .catch(function(error) {
+            .catch(error => {
                 console.log(error);
             });
     }

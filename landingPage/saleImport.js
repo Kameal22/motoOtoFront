@@ -2,15 +2,20 @@ const mainDiv = document.querySelector('#scdSection');
 
 const salesAppendingLimit = 4;
 
-//RANDOMIZE appended cars
+function shuffle(importedSales) {
+    for (let i = importedSales.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [importedSales[i], importedSales[j]] = [importedSales[j], importedSales[i]];
+    }
+    return importedSales;
+}
 
 axios.get(`http://localhost:8080/api/sale-announcements`)
-    .then(function(response) {
+    .then(response => {
+
         const importedSales = response.data
 
-        const salesAmmount = response.data.length
-
-        const randomSaleNumber = Math.floor(Math.random() * salesAmmount) + 1
+        shuffle(importedSales)
 
         importedSales.slice(-salesAppendingLimit).forEach((sale) => {
 

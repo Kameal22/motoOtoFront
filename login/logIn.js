@@ -10,14 +10,13 @@ loginForm.addEventListener('submit', (e) => {
             email: email,
             password: password
         })
-        .then(function(response) {
+        .then(response => {
             const token = response.data;
-            console.log(token);
             window.localStorage.setItem('userToken', token);
             location.href = "/motoOto/login/userIndex.html";
         })
 
-    .catch(function(error) {
+    .catch(error => {
         console.log(error);
         checkLoginInputs();
     });

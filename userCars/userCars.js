@@ -3,7 +3,7 @@ const mainUserSalesDiv = document.querySelector('#userSalesSection');
 const saleInfo = document.querySelector('#annHeading');
 
 axios.get('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-announcements')
-    .then(function(response) {
+    .then(response => {
 
         const userSales = response.data
 
@@ -80,6 +80,6 @@ axios.get('http://localhost:8080/api/users/' + getUsersId(rawToken) + '/sale-ann
 
         })
     })
-    .catch(function(error) {
+    .catch(error => {
         console.log(error);
     });
