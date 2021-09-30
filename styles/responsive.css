@@ -1,3 +1,88 @@
+@media screen and (max-width: 1400px) {
+    #mainInfo {
+        width: 50%;
+        height: 30%;
+        margin-right: 5%;
+        margin-bottom: 20%;
+        color: rgba(32, 32, 32, 0.863);
+        letter-spacing: 1px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    #mainInfo h2 {
+        font-size: 1.3em;
+        letter-spacing: 0px;
+    }
+    #carSelection #carSelectHeading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+        font-size: 1.1em;
+        padding-top: 4vh;
+        color: rgba(32, 32, 32, 0.863);
+    }
+    #selectingOptions #sendBtn {
+        width: 40%;
+        margin: 6vh auto;
+        text-align: center;
+    }
+    #selectingOptions #sendBtn #sendForm {
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        color: rgba(32, 32, 32, 0.863);
+        padding: 6px 18px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    #carSelection #selectingOptions {
+        margin-top: 5vh;
+    }
+    #selectingOptions select {
+        width: 9em;
+        height: 50%;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.534);
+    }
+    #carSelection {
+        width: 35%;
+        height: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    .saleDescriptions {
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+        margin-top: 2vh;
+        font-size: .9em;
+    }
+    .prices {
+        width: 25%;
+        margin-left: 1em;
+        color: rgba(0, 128, 0, 0.74);
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        font-size: 1.2em;
+    }
+    .announcementsMainDiv {
+        width: 40%;
+        margin-top: 4vh;
+    }
+}
+
 @media screen and (max-width: 1060px) {
     /* Nav, user logged out */
     #logo h2 {
@@ -10,18 +95,319 @@
     #logIn h3 {
         font-size: 1em;
     }
+    #mainInfo {
+        display: none;
+    }
+    #carSelection {
+        min-width: 50%;
+        height: 90%;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    .announcementsPhotoClass {
+        width: 100%;
+        height: 22vh;
+        border-radius: 4px;
+        box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
+    }
 }
 
-@media screen and (max-width: 802px) {
+@media screen and (max-width: 803px) {
     /* Nav, user logged out */
     .toggleNav {
         display: flex;
     }
-    #logIn h3 {
+    #logIn {
         display: none;
     }
     #heading {
         margin-left: 2em;
         width: 50%;
+    }
+    #heading {
+        display: none;
+    }
+    @keyframes transitionIn {
+        from {
+            opacity: 0;
+            transform: rotateX(-10deg);
+            transform: translate(-200px, 0);
+        }
+        to {
+            opacity: 1;
+            transform: rotateX(0);
+            transform: translate(0, 0);
+        }
+    }
+    #logIn.active {
+        animation: transitionIn 1s;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        height: 20vh;
+        margin-top: 6vh;
+        background: rgba( 125, 153, 181, 0.25);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 5px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #logIn h3 {
+        margin-top: 2vh;
+    }
+    #carSelection #carSelectHeading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+        font-size: 1.1em;
+        padding-top: 4vh;
+        color: rgba(32, 32, 32, 0.863);
+    }
+    #selectingOptions #sendBtn {
+        width: 40%;
+        margin: 4vh auto;
+        text-align: center;
+    }
+    #selectingOptions #sendBtn #sendForm {
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        color: rgba(32, 32, 32, 0.863);
+        padding: 3px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    #carSelection #selectingOptions {
+        margin-top: 4vh;
+    }
+    #selectingOptions select {
+        width: 8em;
+        height: 40%;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.534);
+    }
+    #carSelection {
+        width: 35%;
+        height: 80%;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #scdSection {
+        margin-top: 2vh;
+        background-color: #7d99b54b;
+        color: rgba(32, 32, 32, 0.863);
+        letter-spacing: 1px;
+        font-size: .9em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .announcementsMainDiv {
+        width: 50%;
+        margin-top: 4vh;
+    }
+    .saleDescriptions {
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vh;
+    }
+    .saleDescriptions h2::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: rgb(102, 156, 236);
+    }
+    .saleDescriptions h2:first-child::before {
+        content: none;
+        padding-right: 1vh;
+        color: rgb(102, 156, 236);
+    }
+    .prices {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgba(0, 128, 0, 0.74);
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        font-size: 1.2em;
+    }
+    .announcementsPhotoClass {
+        width: 100%;
+        height: 20vh;
+        border-radius: 4px;
+        box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
+    }
+}
+
+@media screen and (max-width: 580px) {
+    /* Nav, user logged out */
+    #logIn.active {
+        animation: transitionIn 1s;
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        height: 8vh;
+        margin-top: 6vh;
+        background: rgba( 125, 153, 181, 0.25);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 5px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #logIn h3 {
+        margin-top: 2vh;
+    }
+    #selectingOptions #firstForms {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+    }
+    #firstForms .formOne,
+    .formTwo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 6vh;
+    }
+    #selectingOptions #scdForms {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 1vh;
+    }
+    #scdForms .formThree,
+    .formFour {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 6vh;
+    }
+    #selectingOptions #thirdForms {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 1vh;
+    }
+    #thirdForms .formFive,
+    .formSix {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 6vh;
+    }
+    #carSelection #carSelectHeading {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        text-align: center;
+        font-size: 1.1em;
+        padding-top: 3vh;
+        color: rgba(32, 32, 32, 0.863);
+    }
+    #selectingOptions #sendBtn {
+        width: 50%;
+        margin: 4vh auto;
+        text-align: center;
+    }
+    #selectingOptions #sendBtn #sendForm {
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        color: rgba(32, 32, 32, 0.863);
+        padding: 4px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        border-radius: 5px;
+    }
+    #carSelection {
+        width: 65%;
+        height: 75%;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #scdSection {
+        margin-top: 2vh;
+        background-color: #7d99b54b;
+        color: rgba(32, 32, 32, 0.863);
+        letter-spacing: 1px;
+        font-size: .8em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .announcementsMainDiv {
+        width: 50%;
+        margin-top: 4vh;
+    }
+    .saleDescriptions {
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vh;
+    }
+    .saleDescriptions h2::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: rgb(102, 156, 236);
+    }
+    .saleDescriptions h2:first-child::before {
+        content: none;
+        padding-right: 1vh;
+        color: rgb(102, 156, 236);
+    }
+    .prices {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        color: rgba(0, 128, 0, 0.74);
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+        font-size: 1.1em;
+    }
+    .announcementsPhotoClass {
+        width: 100%;
+        height: 15vh;
+        border-radius: 4px;
+        box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
     }
 }

@@ -1,8 +1,9 @@
 const toggleBtn = document.querySelector('.toggleNav');
-const account = document.querySelector('#account');
-const login = document.querySelector('#login');
-const nav = document.querySelector('nav');
+const scdToggleBtn = document.querySelector('.toggleNavTwo');
+const loginCreate = document.querySelector('#logIn');
+
+
 
 toggleBtn.addEventListener('click', () => {
-    nav.classList.toggle('biggerNav');
+    loginCreate.classList.toggle('active');
 })

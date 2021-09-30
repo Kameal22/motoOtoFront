@@ -1,0 +1,17 @@
+.toggleNavTwo {
+    position: absolute;
+    top: 1.6rem;
+    right: 5%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggleNavTwo .bar {
+    height: 2px;
+    width: 100%;
+    background-color: #000000;
+    border-radius: 10px;
+}

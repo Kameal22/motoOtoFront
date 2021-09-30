@@ -1,0 +1,39 @@
+@media screen and (max-width: 1400px) {
+    /* Nav, user logged out */
+    #logo h2 {
+        font-size: 1.3em;
+    }
+    #heading h3 {
+        font-size: 1em;
+        letter-spacing: 0px;
+    }
+    #userNameSection h3 {
+        font-size: 1em;
+    }
+    #userNameSection #carSell {
+        padding: 3px 6px;
+        font-size: .9em;
+    }
+    #userNameSection #userSales {
+        padding: 3px 6px;
+        font-size: .9em;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    #heading h3 {
+        display: none;
+    }
+    #userNameSection h3 {
+        display: none;
+    }
+    #userNameSection #carSell {
+        display: none;
+    }
+    #userNameSection #userSales {
+        display: none;
+    }
+    .toggleNavTwo {
+        display: flex;
+    }
+}
