@@ -1,3 +1,48 @@
+@media screen and (max-width: 1695px) {
+    .popup {
+        margin: 10vh auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.767);
+        border-radius: 5px;
+        width: 25%;
+        height: 58vh;
+        position: relative;
+        transition: all 5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .popup h2 {
+        font-size: 1.2em;
+        width: 50%;
+        text-align: center;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+    }
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .popup .close:hover {
+        color: #588ec5;
+    }
+    .popup .content {
+        max-height: 60%;
+        font-size: .9em;
+        overflow: auto;
+        margin-bottom: 8vh;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     #mainInfo {
         width: 50%;
@@ -81,6 +126,48 @@
         width: 40%;
         margin-top: 4vh;
     }
+    .popup {
+        margin: 10vh auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.767);
+        border-radius: 5px;
+        width: 25%;
+        height: 58vh;
+        position: relative;
+        transition: all 5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .popup h2 {
+        font-size: 1.2em;
+        width: 70%;
+        text-align: center;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+    }
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .popup .close:hover {
+        color: #588ec5;
+    }
+    .popup .content {
+        max-height: 60%;
+        font-size: .9em;
+        overflow: auto;
+        margin-bottom: 8vh;
+    }
 }
 
 @media screen and (max-width: 1060px) {
@@ -115,6 +202,46 @@
         height: 22vh;
         border-radius: 4px;
         box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
+    }
+    .popup {
+        margin: 10vh auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.767);
+        border-radius: 5px;
+        width: 35%;
+        height: 56vh;
+        position: relative;
+        transition: all 5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .popup h2 {
+        width: 50%;
+        text-align: center;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+    }
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .popup .close:hover {
+        color: #588ec5;
+    }
+    .popup .content {
+        max-height: 60%;
+        overflow: auto;
+        margin-bottom: 8vh;
     }
 }
 
@@ -223,7 +350,7 @@
     }
     .announcementsMainDiv {
         width: 50%;
-        margin-top: 4vh;
+        margin-top: 2vh;
     }
     .saleDescriptions {
         display: flex;
@@ -257,6 +384,69 @@
         height: 20vh;
         border-radius: 4px;
         box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
+    }
+    footer {
+        margin-top: 2vh;
+        width: 100%;
+        height: 12vh;
+        border-top: 1px solid grey;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #7d99b54b;
+    }
+    footer>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: .9em;
+    }
+    footer h4,
+    p::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: #588ec5;
+    }
+    .popup {
+        margin: 10vh auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.767);
+        border-radius: 5px;
+        width: 40%;
+        height: 56vh;
+        position: relative;
+        transition: all 5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .popup h2 {
+        width: 50%;
+        text-align: center;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+    }
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .popup .close:hover {
+        color: #588ec5;
+    }
+    .popup .content {
+        max-height: 60%;
+        overflow: auto;
+        margin-bottom: 8vh;
     }
 }
 
@@ -312,9 +502,8 @@
     #selectingOptions #thirdForms {
         display: flex;
         width: 100%;
-        flex-direction: column;
         justify-content: space-around;
-        margin-top: 1vh;
+        margin-top: 4vh;
     }
     #thirdForms .formFive,
     .formSix {
@@ -374,8 +563,8 @@
         justify-content: space-around;
     }
     .announcementsMainDiv {
-        width: 50%;
-        margin-top: 4vh;
+        width: 60%;
+        margin-top: 2vh;
     }
     .saleDescriptions {
         display: flex;
@@ -409,5 +598,80 @@
         height: 15vh;
         border-radius: 4px;
         box-shadow: 0px 6px 4px -2px rgba(0, 0, 0, 0.50);
+    }
+    #firstForms #brandSelection {
+        width: 80%;
+    }
+    #firstForms #modelSelection {
+        width: 80%;
+    }
+    #scdForms #generationSelection {
+        width: 80%;
+    }
+    #scdForms #fuelSelection {
+        width: 80%;
+    }
+    footer {
+        margin-top: 2vh;
+        width: 100%;
+        height: 10vh;
+        border-top: 1px solid grey;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #7d99b54b;
+    }
+    footer>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        font-size: .7em;
+    }
+    footer h4,
+    p::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: #588ec5;
+    }
+    .popup {
+        margin: 10vh auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.767);
+        border-radius: 5px;
+        width: 60%;
+        height: 56vh;
+        position: relative;
+        transition: all 5s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .popup h2 {
+        width: 50%;
+        text-align: center;
+        color: #333;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4vh;
+    }
+    .popup .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #333;
+    }
+    .popup .close:hover {
+        color: #588ec5;
+    }
+    .popup .content {
+        max-height: 60%;
+        overflow: auto;
+        margin-bottom: 8vh;
     }
 }

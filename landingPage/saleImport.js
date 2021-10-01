@@ -23,6 +23,10 @@ axios.get(`http://localhost:8080/api/sale-announcements`)
 
             const mainPhotosDiv = document.createElement('div');
 
+            mainPhotosDiv.addEventListener('click', (announcement) => {
+                console.log(announcement)
+            })
+
             const mainPhotos = document.createElement('img');
             mainPhotos.src = sale.imageURL;
 
