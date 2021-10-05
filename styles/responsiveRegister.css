@@ -1,0 +1,280 @@
+@media screen and (max-width: 1695px) {
+    #registrationNav h3 {
+        color: black;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    #registrationNav h3 {
+        font-size: 1em;
+        color: black;
+    }
+    #mainReg {
+        width: 45% !important;
+        height: 75vh;
+        margin: 6vh auto;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #mainReg .heading {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mainReg .register {
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register .form-group {
+        margin-bottom: 4vh;
+        width: 100%;
+    }
+    .register .form-group p {
+        position: absolute;
+        color: red;
+    }
+    .register .form-group p::before {
+        content: none;
+    }
+    .register .form-group input {
+        border: 3px solid grey;
+    }
+    .form-group label {
+        font-size: .9em;
+        font-weight: bold;
+    }
+    .form-group input {
+        padding: 10px;
+        margin-top: 1vh;
+        border: none;
+    }
+    .register button {
+        width: 100%;
+        height: 4vh;
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        cursor: pointer;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        margin-top: 2vh;
+    }
+    .register button:hover {
+        background-color: rgba(255, 255, 255, 0.308);
+    }
+    footer {
+        margin-top: 2vh;
+        width: 100%;
+        height: 12vh;
+        border-top: 1px solid grey;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #7d99b54b;
+        font-size: .9em;
+    }
+    footer>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    footer h4,
+    p::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: #588ec5;
+    }
+}
+
+@media screen and (max-width: 803px) {
+    #registrationNav h3 {
+        display: none;
+    }
+    #registrationNav h3 {
+        font-size: 1em;
+        color: black;
+    }
+    #mainReg {
+        width: 60% !important;
+        height: 75vh;
+        margin: 6vh auto;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #mainReg .heading {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .9em !important;
+    }
+    #mainReg .register {
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register .form-group {
+        margin-bottom: 4vh;
+        width: 100%;
+    }
+    .register .form-group p {
+        position: absolute;
+        color: red;
+    }
+    .register .form-group p::before {
+        content: none;
+    }
+    .register .form-group input {
+        border: 3px solid grey;
+    }
+    .form-group label {
+        font-size: .9em;
+        font-weight: bold;
+    }
+    .form-group input {
+        padding: 10px;
+        margin-top: 1vh;
+        border: none;
+    }
+    .register button {
+        width: 100%;
+        height: 4vh;
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        cursor: pointer;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        margin-top: 2vh;
+    }
+    .register button:hover {
+        background-color: rgba(255, 255, 255, 0.308);
+    }
+    footer {
+        margin-top: 2vh;
+        width: 100%;
+        height: 12vh;
+        border-top: 1px solid grey;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #7d99b54b;
+        font-size: .9em;
+    }
+    footer>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    footer h4,
+    p::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: #588ec5;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #registrationNav h3 {
+        display: none;
+    }
+    #registrationNav h3 {
+        font-size: 1em;
+        color: black;
+    }
+    #mainReg {
+        width: 80% !important;
+        height: 75vh;
+        margin: 6vh auto;
+        background: rgba( 125, 153, 181, 0.25);
+        box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37);
+        backdrop-filter: blur( 4px);
+        -webkit-backdrop-filter: blur( 4px);
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18);
+    }
+    #mainReg .heading {
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: .9em !important;
+    }
+    #mainReg .register {
+        margin-top: 2vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .register .form-group {
+        margin-bottom: 4vh;
+        width: 100%;
+    }
+    .register .form-group p {
+        position: absolute;
+        color: red;
+    }
+    .register .form-group p::before {
+        content: none;
+    }
+    .register .form-group input {
+        border: 3px solid grey;
+    }
+    .form-group label {
+        font-size: .9em;
+        font-weight: bold;
+    }
+    .form-group input {
+        padding: 10px;
+        margin-top: 1vh;
+        border: none;
+    }
+    .register button {
+        width: 100%;
+        height: 4vh;
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid white;
+        cursor: pointer;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        margin-top: 2vh;
+    }
+    .register button:hover {
+        background-color: rgba(255, 255, 255, 0.308);
+    }
+    footer {
+        margin-top: 2vh;
+        width: 100%;
+        height: 12vh;
+        border-top: 1px solid grey;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #7d99b54b;
+        font-size: .9em;
+    }
+    footer>div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    footer h4,
+    p::before {
+        content: "\007C";
+        padding-right: 1vh;
+        color: #588ec5;
+    }
+}
