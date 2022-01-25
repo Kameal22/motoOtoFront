@@ -1,1 +1,1 @@
-# OtoMoto Clone app
+# OtoMoto Clone app vanilla js
